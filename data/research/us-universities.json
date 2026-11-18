@@ -1,0 +1,731 @@
+[
+  {
+    "id": "harvard",
+    "name": "Harvard University (incl. Harvard Medical School)",
+    "category": "University",
+    "careersUrl": "https://careers.harvard.edu/",
+    "ats": {
+      "type": "smartrecruiters",
+      "companyId": "HarvardUniversity"
+    },
+    "verified": "2026-11-18",
+    "notes": "Public site careers.harvard.edu is an Attrax front-end; postings come from SmartRecruiters (HMS, FAS, Chan, etc. all in one tenant).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "upenn",
+    "name": "University of Pennsylvania (incl. Perelman School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://wd1.myworkdaysite.com/recruiting/upenn/careers-at-penn",
+    "ats": {
+      "type": "workday",
+      "host": "wd1.myworkdaysite.com",
+      "tenant": "upenn",
+      "site": "careers-at-penn"
+    },
+    "verified": "2026-11-18",
+    "notes": "Workday on myworkdaysite.com: job URL is https://wd1.myworkdaysite.com/en-US/recruiting/upenn/careers-at-penn{externalPath}",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "uw-seattle",
+    "name": "University of Washington",
+    "category": "University",
+    "careersUrl": "https://wd5.myworkdaysite.com/recruiting/uw/UWHires",
+    "ats": {
+      "type": "workday",
+      "host": "wd5.myworkdaysite.com",
+      "tenant": "uw",
+      "site": "UWHires"
+    },
+    "verified": "2026-11-18",
+    "notes": "Includes UW Medicine hospital jobs; myworkdaysite.com host, job URL https://wd5.myworkdaysite.com/en-US/recruiting/uw/UWHires{externalPath}",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "wustl",
+    "name": "Washington University in St. Louis",
+    "category": "University",
+    "careersUrl": "https://wustl.wd1.myworkdayjobs.com/External",
+    "ats": {
+      "type": "workday",
+      "host": "wustl.wd1.myworkdayjobs.com",
+      "tenant": "wustl",
+      "site": "External"
+    },
+    "verified": "2026-11-18",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "uchicago",
+    "name": "University of Chicago",
+    "category": "University",
+    "careersUrl": "https://uchicago.wd5.myworkdayjobs.com/External",
+    "ats": {
+      "type": "workday",
+      "host": "uchicago.wd5.myworkdayjobs.com",
+      "tenant": "uchicago",
+      "site": "External"
+    },
+    "verified": "2026-11-18",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "ohio-state",
+    "name": "The Ohio State University (incl. Wexner Medical Center)",
+    "category": "University",
+    "careersUrl": "https://osu.wd1.myworkdayjobs.com/OSUCareers",
+    "ats": {
+      "type": "workday",
+      "host": "osu.wd1.myworkdayjobs.com",
+      "tenant": "osu",
+      "site": "OSUCareers"
+    },
+    "verified": "2026-11-18",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "mit",
+    "name": "Massachusetts Institute of Technology",
+    "category": "University",
+    "careersUrl": "https://careers.peopleclick.com/careerscp/client_mit/external/search.do",
+    "ats": {
+      "type": "link-only",
+      "reason": "PeopleClick (Avature legacy), session-based: (1) GET https://careers.peopleclick.com/careerscp/client_mit/external/search.do with cookie jar (redirects to .../search/search.html, sets session cookie); (2) POST form-urlencoded to https://careers.peopleclick.com/careerscp/client_mit/external/results/searchResult.html body com.peopleclick.cp.formdata.SEARCHCRITERIA_KEYWORDS=<kw>&com.peopleclick.cp.formdata.hitsPerPage=25&input=Search (same cookies); (3) GET https://careers.peopleclick.com/careerscp/api/client_mit/external/en-us/getJobs?page=1 (same cookies) -> JSON {totalHits, hitsPerPage, jobList:[{jobPostId, attributes:{FLD_JP_POSTING_TITLE, JPM_LOCATION, JP_POSTEDON, FLD_JP_DEPARTMENT, JPM_REQID}}]}. Job URL: https://careers.peopleclick.com/careerscp/client_mit/external/jobDetails/jobDetail.html?jobPostId={jobPostId}&localeCode=en-us. Verified 2026-11-18: keyword neuroscience -> totalHits 17."
+    },
+    "verified": "2026-11-18",
+    "notes": "Lab roles are titled Technical Associate / Technical Assistant / Research Support Associate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "stanford",
+    "name": "Stanford University (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://careersearch.stanford.edu/hcmUI/CandidateExperience/en/sites/stanford/",
+    "ats": {
+      "type": "oracle",
+      "host": "careersearch.stanford.edu",
+      "siteNumber": "stanford"
+    },
+    "verified": "2026-11-18",
+    "notes": "Oracle Recruiting Cloud on a vanity host; the hcmRestApi works directly on careersearch.stanford.edu.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "vanderbilt",
+    "name": "Vanderbilt University",
+    "category": "University",
+    "careersUrl": "https://ecsr.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+    "ats": {
+      "type": "oracle",
+      "host": "ecsr.fa.us2.oraclecloud.com",
+      "siteNumber": "CX_1"
+    },
+    "verified": "2026-11-18",
+    "notes": "Vanderbilt University (not VUMC, which is a separate employer).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "yale",
+    "name": "Yale University (incl. Yale School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://careers.yale.edu/us/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://careers.yale.edu/us/en/search-results"
+    },
+    "verified": "2026-11-18",
+    "notes": "Phenom front-end over Workday (jobSeqNo like YUCYUHUS139151WDEXTERNALENUS).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "uva",
+    "name": "University of Virginia (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://jobs.virginia.edu/us/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://jobs.virginia.edu/us/en/search-results"
+    },
+    "verified": "2026-11-18",
+    "notes": "Phenom front-end over Workday; direct Workday uva.wd1/UVAJobs returns 0 jobs.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "duke",
+    "name": "Duke University & Duke University Health System",
+    "category": "University",
+    "careersUrl": "https://careers.duke.edu/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://careers.duke.edu"
+    },
+    "verified": "2026-11-18",
+    "notes": "SuccessFactors RMK (company dukeuniverP1). Includes Duke Health clinical jobs.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "columbia",
+    "name": "Columbia University (incl. Columbia University Irving Medical Center)",
+    "category": "University",
+    "careersUrl": "https://opportunities.columbia.edu/jobs/search",
+    "ats": {
+      "type": "html",
+      "url": "https://opportunities.columbia.edu/jobs/search?query={q}",
+      "linkPattern": "/opportunities\\.columbia\\.edu\\/jobs\\/(?!search)[a-z0-9-]+/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered search: GET /jobs/search?query=<kw>&page=N; job anchors are absolute https://opportunities.columbia.edu/jobs/<slug-uuid> (also in data-job-url). Detail pages embed schema.org JobPosting JSON-LD. CUIMC lab titles: Research Assistant, Technician A/B, Research Worker.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "jhu",
+    "name": "Johns Hopkins University (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://jobs.jhu.edu/",
+    "ats": {
+      "type": "link-only",
+      "reason": "SAP SuccessFactors RMK at https://jobs.jhu.edu (job URLs like /job/Baltimore-Research-Technologist-MD-21205/1299302500, so {type:successfactors, baseUrl:https://jobs.jhu.edu} should work) but Cloudflare returns 403 to curl/WebFetch for every path incl. /search/?q=; not verifiable."
+    },
+    "verified": "",
+    "notes": "Lab titles at JHU are Research Technologist / Research Specialist / Research Program Assistant.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "ucsf",
+    "name": "University of California, San Francisco",
+    "category": "University",
+    "careersUrl": "https://careers.ucsf.edu/careers/SearchJobs",
+    "ats": {
+      "type": "link-only",
+      "reason": "Looks like Avature (job URLs https://careers.ucsf.edu/careers/JobDetail/San-Francisco-CA-United-States/<id>; search page /careers/SearchJobs), i.e. likely {type:avature, host:careers.ucsf.edu, path:/careers}, but TLS connections from our network stall (likely geo-block) and WebFetch saw no server-rendered results for ?keywords=; not verified."
+    },
+    "verified": "",
+    "notes": "Lab titles: Staff Research Associate I-IV, Laboratory Assistant.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "ucla",
+    "name": "University of California, Los Angeles",
+    "category": "University",
+    "careersUrl": "https://jobs.ucla.edu/careers-home",
+    "ats": {
+      "type": "jibe",
+      "host": "jobs.ucla.edu"
+    },
+    "verified": "2026-11-18",
+    "notes": "iCIMS Jibe (careers-ucla.icims.com). Lab titles: Staff Research Associate, Laboratory Assistant.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "ucsd",
+    "name": "University of California, San Diego (incl. UC San Diego Health)",
+    "category": "University",
+    "careersUrl": "https://employment.ucsd.edu/jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://employment.ucsd.edu/jobs?keyword={q}",
+      "linkPattern": "/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered list; job links like /staff-research-associate-pathology-142112/job/E3046FEB89C0CB2D80CD7A16CFD89C2A; pagination /jobs/page/N. Applications go to jobs.ucsd.edu (Kenexa/BrassRing-style login).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "tufts",
+    "name": "Tufts University (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://jobs.tufts.edu/jobs",
+    "ats": {
+      "type": "jibe",
+      "host": "jobs.tufts.edu"
+    },
+    "verified": "2026-11-18",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "weill-cornell",
+    "name": "Weill Cornell Medicine",
+    "category": "Medical School / Hospital",
+    "careersUrl": "https://careers.weill.cornell.edu/",
+    "ats": {
+      "type": "successfactors-classic",
+      "host": "career4.successfactors.com",
+      "company": "C0000274692P"
+    },
+    "verified": "2026-11-18",
+    "notes": "XML feed returned 202 jobs (titles, ReqId, Posted-Date, Location, Department) on 2026-11-18.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "northwestern",
+    "name": "Northwestern University (incl. Feinberg School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1",
+    "ats": {
+      "type": "link-only",
+      "reason": "Oracle PeopleSoft Candidate Gateway (fluid). (1) GET https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1 with cookie jar -> HTML listing newest 50 jobs; read hidden inputs ICSID and ICStateNum. (2) POST form-urlencoded to https://careers.northwestern.edu/psc/hrnu_er/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL with ICAJAX=1&ICNAVTYPEDROPDOWN=0&ICType=Panel&ICElementNum=0&ICStateNum=<n>&ICAction=HRS_SCH_WRK_FLU_HRS_SEARCH_BTN&ICSID=<sid>&HRS_SCH_WRK_HRS_SCH_TEXT100=<kw> -> PeopleSoft AJAX XML containing HTML; titles in elements id=SCH_JOB_TITLE$<i>, job ids in id=HRS_APP_JBSCH_I_HRS_JOB_OPENING_ID$<i>. Job URL: same .GBL?Page=HRS_APP_JBPST_FL&Action=U&FOCUS=Applicant&SiteId=1&JobOpeningId=<id>&PostingSeq=1. Verified: keyword neuroscience -> 21 rows."
+    },
+    "verified": "2026-11-18",
+    "notes": "Lab titles: Research Technologist 1/2, Research Associate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "uc-berkeley",
+    "name": "University of California, Berkeley",
+    "category": "University",
+    "careersUrl": "https://ucberkeley.careers.universityofcalifornia.edu",
+    "ats": {
+      "type": "link-only",
+      "reason": "Oracle PeopleSoft Candidate Gateway (UCPath careerspub, site 21). Same 2-step flow as Northwestern: (1) GET https://careerspub.universityofcalifornia.edu/psc/ucb/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=21 (cookie jar; note /psc/ not /psp/, /psp/ redirects to a login page) -> newest 50 jobs; read ICSID + ICStateNum. (2) POST to https://careerspub.universityofcalifornia.edu/psc/ucb/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL body ICAJAX=1&ICNAVTYPEDROPDOWN=0&ICType=Panel&ICElementNum=0&ICStateNum=<n>&ICAction=HRS_SCH_WRK_FLU_HRS_SEARCH_BTN&ICSID=<sid>&HRS_SCH_WRK_HRS_SCH_TEXT100=<kw> -> titles in id=SCH_JOB_TITLE$<i>, ids in id=HRS_APP_JBSCH_I_HRS_JOB_OPENING_ID$<i>. Job URL: ...HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_JBPST_FL&Action=U&FOCUS=Applicant&SiteId=21&JobOpeningId=<id>&PostingSeq=1. Verified: staff research associate -> 2 rows incl. Molecular & Cell Biology."
+    },
+    "verified": "2026-11-18",
+    "notes": "Lab titles: Staff Research Associate, Laboratory Assistant.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "umich",
+    "name": "University of Michigan (incl. Medical School)",
+    "category": "University",
+    "careersUrl": "https://careers.umich.edu/search-jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://careers.umich.edu/search-jobs?keyword={q}",
+      "linkPattern": "/job_detail/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Drupal site, server-rendered results; job links /job_detail/<id>/<slug>. Lab titles: Research Lab Tech Associate/Intermediate, Research Technician Associate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "cornell",
+    "name": "Cornell University (Ithaca)",
+    "category": "University",
+    "careersUrl": "https://cornell.wd1.myworkdayjobs.com/CornellCareerPage",
+    "ats": {
+      "type": "workday",
+      "host": "cornell.wd1.myworkdayjobs.com",
+      "tenant": "cornell",
+      "site": "CornellCareerPage"
+    },
+    "verified": "2026-11-18",
+    "notes": "Ithaca campus; Weill Cornell Medicine is separate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "nyu",
+    "name": "New York University",
+    "category": "University",
+    "careersUrl": "https://careers-nyu.icims.com/jobs/search",
+    "ats": {
+      "type": "icims",
+      "host": "careers-nyu.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Hub portal aggregating uscareers-nyu / shanghai-nyu / global-nyu job links. Multi-word keywords are ANDed strictly (research technician -> 0, research -> results).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "nyu-langone",
+    "name": "NYU Langone Health / NYU Grossman School of Medicine",
+    "category": "Medical School / Hospital",
+    "careersUrl": "https://jobs.nyulangone.org/job-search-results/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Symphony Talent CWS (WordPress, org 1637; ATS behind is SilkRoad). Results load via JSON: GET https://jobsapi-internal.m-cloud.io/api/job?Organization=1637&SearchText=<kw>&Limit=25&offset=1&fuzzy=false&useBooleanKeywordSearch=true (offset is 1-based row index: page*Limit+1; no auth; plain JSON, JSONP if callback=) -> {totalHits, queryResult:[{id, title, primary_city, primary_state, open_date, url, department, function, company_name}]}. url is the detail link https://jobs.nyulangone.org/job/<id>/<slug>/. Without fuzzy=false the search is fuzzy (research technician -> 1336 of 1610). Verified: research technician -> 142."
+    },
+    "verified": "2026-11-18",
+    "notes": "Lab titles: Associate Research Technician, Research Technician, Senior Research Technician.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "emory",
+    "name": "Emory University (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://staff-emory.icims.com/jobs/search?ss=1",
+    "ats": {
+      "type": "icims",
+      "host": "staff-emory.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Staff portal; faculty on faculty-emory.icims.com.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "mount-sinai",
+    "name": "Icahn School of Medicine at Mount Sinai / Mount Sinai Health System",
+    "category": "Medical School / Hospital",
+    "careersUrl": "https://ejis.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX/requisitions",
+    "ats": {
+      "type": "oracle",
+      "host": "ejis.fa.us6.oraclecloud.com",
+      "siteNumber": "CX"
+    },
+    "verified": "2026-11-18",
+    "notes": "Front page careers.mountsinai.org; Icahn research jobs (Associate Researcher, Research Assistant) are in the same Oracle site. PrimaryLocation is just United States.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "pitt",
+    "name": "University of Pittsburgh (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://cfopitt.taleo.net/careersection/pitt_staff_external/jobsearch.ftl?lang=en",
+    "ats": {
+      "type": "taleo",
+      "host": "cfopitt.taleo.net",
+      "section": "pitt_staff_external",
+      "portal": "14200023232"
+    },
+    "verified": "2026-11-18",
+    "notes": "REST POST /careersection/rest/jobboard/searchjobs?lang=en&portal=14200023232 returned totalCount 85 for research. UPMC is a separate employer.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "brown",
+    "name": "Brown University",
+    "category": "University",
+    "careersUrl": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown",
+    "ats": {
+      "type": "workday",
+      "host": "brown.wd5.myworkdayjobs.com",
+      "tenant": "brown",
+      "site": "staff-careers-brown"
+    },
+    "verified": "2026-11-18",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "boston-university",
+    "name": "Boston University (incl. Chobanian & Avedisian School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://jobs.silkroad.com/BU/External",
+    "ats": {
+      "type": "html",
+      "url": "https://jobs.silkroad.com/BU/External?SearchString={q}",
+      "linkPattern": "/BU/External/jobs/"
+    },
+    "verified": "2026-11-18",
+    "notes": "SilkRoad Recruiting, server-rendered; keyword param is SearchString (keyword/keywords/q are ignored), 10 per page, &page=N. Matching is loose (searches descriptions). Job URL https://jobs.silkroad.com/BU/External/jobs/<id>.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "dartmouth",
+    "name": "Dartmouth College (incl. Geisel School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://searchjobs.dartmouth.edu/postings/search",
+    "ats": {
+      "type": "html",
+      "url": "https://searchjobs.dartmouth.edu/postings/search?query={q}",
+      "linkPattern": "/\\/postings\\/\\d+/"
+    },
+    "verified": "2026-11-18",
+    "notes": "PeopleAdmin 7, server-rendered; job links /postings/<id>. Lab titles: Laboratory Technician I-III, Research Assistant I.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "rockefeller",
+    "name": "The Rockefeller University",
+    "category": "University",
+    "careersUrl": "https://careers.rockefeller.edu/research-assistant-opportunities",
+    "ats": {
+      "type": "jibe",
+      "host": "careers.rockefeller.edu"
+    },
+    "verified": "2026-11-18",
+    "notes": "Jibe front-end over iCIMS (careers-rockefelleruniversity.icims.com, whose classic search returned 0 to curl). rockefeller.edu itself times out from some networks. Many lab Research Assistant roles (post-bac friendly).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "baylor-college-of-medicine",
+    "name": "Baylor College of Medicine",
+    "category": "Medical School / Hospital",
+    "careersUrl": "https://jobs.bcm.edu/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://jobs.bcm.edu"
+    },
+    "verified": "2026-11-18",
+    "notes": "SuccessFactors Unify site (no data-row HTML). POST https://jobs.bcm.edu/services/recruiting/v1/jobs needs the session cookie + X-CSRF-Token header taken from `var CSRFToken = \"...\"` on any GET /search/ page; body {locale:en_US,pageNumber:0,keywords,location:\"\",facetFilters:{},brand:\"\",skills:[],categoryId:0,alertId:\"\",rcmCandidateId:\"\",sortBy:\"\"} -> {totalJobs, jobSearchResult:[{response:{id, unifiedStandardTitle, urlTitle, jobLocationShort}}]}. research technician -> 314.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "ut-southwestern",
+    "name": "UT Southwestern Medical Center",
+    "category": "Medical School / Hospital",
+    "careersUrl": "https://jobs.utsouthwestern.edu/job-search-results/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Symphony Talent CWS on Google Cloud Talent (ATS behind is Taleo utsw.taleo.net section 2). GET https://jobsapi-google.m-cloud.io/api/job/search?CompanyName=companies%2F06f73e7c-038e-4e98-9022-c43f1967ae9c&query=<kw>&pageSize=25 (no auth) -> {totalHits, nextPageToken, searchResults:[{summary, job:{id, title, primary_city, primary_state, open_date, url, department}}]}; next page: add &pageToken=<nextPageToken>. Keyword param MUST be `query` (SearchText/Keywords are ignored on this Google variant). job.url is the detail page https://jobs.utsouthwestern.edu/job/<id>/<slug>/ (faculty rows point to apply.interfolio.com). Verified: research technician -> 266."
+    },
+    "verified": "2026-11-18",
+    "notes": "Lab titles: Research Technician I/II, Research Associate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "unc-chapel-hill",
+    "name": "University of North Carolina at Chapel Hill",
+    "category": "University",
+    "careersUrl": "https://unc.peopleadmin.com/postings/search",
+    "ats": {
+      "type": "html",
+      "url": "https://unc.peopleadmin.com/postings/search?query={q}",
+      "linkPattern": "/\\/postings\\/\\d+/"
+    },
+    "verified": "2026-11-18",
+    "notes": "PeopleAdmin 7, server-rendered; job links /postings/<id> (each appears twice: title and View Details). UNC Health is separate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "uw-madison",
+    "name": "University of Wisconsin-Madison",
+    "category": "University",
+    "careersUrl": "https://jobs.wisc.edu/jobs/search",
+    "ats": {
+      "type": "html",
+      "url": "https://jobs.wisc.edu/jobs/search?query={q}",
+      "linkPattern": "/jobs\\.wisc\\.edu\\/jobs\\/(?!search)[a-z0-9-]+/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Same hosted platform as Columbia opportunities.columbia.edu (Rails sites, /jobs/search?query=&page=N, absolute job hrefs /jobs/<slug-uuid>). Keyword matching is loose.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "princeton",
+    "name": "Princeton University",
+    "category": "University",
+    "careersUrl": "https://research-princeton.icims.com/jobs/search?ss=1",
+    "ats": {
+      "type": "icims",
+      "host": "research-princeton.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "iCIMS portal for research staff (Research Specialist, Laboratory Assistant). Other staff jobs are on careers.princeton.edu, which returns 403 to curl.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "caltech",
+    "name": "California Institute of Technology",
+    "category": "University",
+    "careersUrl": "https://phf.tbe.taleo.net/phf03/ats/careers/v2/jobSearch?org=CALTECH&cws=37",
+    "ats": {
+      "type": "link-only",
+      "reason": "Taleo Business Edition (TBE, not enterprise Taleo). Easiest: RSS GET https://phf.tbe.taleo.net/phf03/ats/servlet/Rss?org=CALTECH&cws=37&WebPage=SRCHR_V2&WebVersion=2&_rss_version=2&keywords=<kw> -> RSS 2.0 <item><title>, <link> (https://phf.tbe.taleo.net/phf03/ats/careers/requisition.jsp?org=CALTECH&cws=37&rid=<id>), <pubDate>, <description>; returns all matches in one feed (research -> 57, nonsense -> 0). The HTML search only filters on POST to .../careers/v2/searchResults?org=CALTECH&cws=37 with act=search&org=CALTECH&cws=37&WebPage=JSRCH_V2&WebVersion=0&keywords=<kw> (GET ignores keywords), 10 rows per page."
+    },
+    "verified": "2026-11-18",
+    "notes": "Includes JPL-related admin roles; Caltech lab titles: Research Assistant, Research Technician, Lab Assistant.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "ohsu",
+    "name": "Oregon Health & Science University",
+    "category": "Medical School / Hospital",
+    "careersUrl": "https://externalcareers-ohsu.icims.com/jobs/search?ss=1",
+    "ats": {
+      "type": "icims",
+      "host": "externalcareers-ohsu.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Staff portal; faculty on facultycareers-ohsu.icims.com. Lab titles: Research Assistant 1/2, Research Associate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "cu-anschutz",
+    "name": "University of Colorado (Anschutz Medical Campus, Denver, system)",
+    "category": "University",
+    "careersUrl": "https://cu.taleo.net/careersection/2/moresearch.ftl?lang=en",
+    "ats": {
+      "type": "taleo",
+      "host": "cu.taleo.net",
+      "section": "2",
+      "portal": "101430233"
+    },
+    "verified": "2026-11-18",
+    "notes": "Covers Anschutz (Aurora), Denver, Colorado Springs and system office; CU Boulder posts separately on jobs.colorado.edu. Keyword search is broad (research -> 682).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "utah",
+    "name": "University of Utah (incl. Spencer Fox Eccles School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://utah.peopleadmin.com/postings/search",
+    "ats": {
+      "type": "html",
+      "url": "https://utah.peopleadmin.com/postings/search?query={q}",
+      "linkPattern": "/\\/postings\\/\\d+/"
+    },
+    "verified": "2026-11-18",
+    "notes": "PeopleAdmin 7. employment.utah.edu is a JS-only DirectEmployers (Nuxt) microsite. Lab titles: Research Technicians, Laboratory Technicians, Research Associate.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "uiowa",
+    "name": "University of Iowa (incl. Carver College of Medicine)",
+    "category": "University",
+    "careersUrl": "https://jobs.uiowa.edu/",
+    "ats": {
+      "type": "html",
+      "url": "https://uiowa.referrals.selectminds.com/jobs/search?keywords={q}",
+      "linkPattern": "/selectminds\\.com\\/jobs\\/[a-z0-9-]+-\\d+$/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Oracle Taleo SelectMinds referral/job portal; GET /jobs/search?keywords= 302-redirects to /jobs/search/<searchId> with server-rendered results; job links https://uiowa.referrals.selectminds.com/jobs/<slug>-<id>. Official apply site is jobs.uiowa.edu (search by requisition #).",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "case-western",
+    "name": "Case Western Reserve University (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://employment.case.edu/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Classic (non-fluid) Oracle PeopleSoft Candidate Gateway: employment.case.edu meta-refreshes to https://employment.case.edu/psp/ERECRUIT/EMPLOYEE/HRMS/c/HRS_HRAM.HRS_APP_SCHJOB.GBL?FOCUS=Applicant&FolderPath=PORTAL_ROOT_OBJECT.HC_HRS_CE_GBL2; the /psc/ERECRUIT/... variant returns a PeopleSoft error page to curl. Not automated/verified."
+    },
+    "verified": "",
+    "notes": "Postings say search by job number at jobs.case.edu. Lab titles: Research Assistant 1-4.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "umn",
+    "name": "University of Minnesota (Twin Cities, incl. Medical School)",
+    "category": "University",
+    "careersUrl": "https://hr.myu.umn.edu/psc/hrprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1",
+    "ats": {
+      "type": "link-only",
+      "reason": "Oracle PeopleSoft Candidate Gateway (fluid). GET https://hr.myu.umn.edu/psc/hrprd/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1 returns the newest 50 jobs server-side (titles id=SCH_JOB_TITLE$<i>, ids id=HRS_APP_JBSCH_I_HRS_JOB_OPENING_ID$<i>) - filter locally. The Northwestern-style keyword POST (ICAction=HRS_SCH_WRK_FLU_HRS_SEARCH_BTN + HRS_SCH_WRK_HRS_SCH_TEXT100) returned the same unfiltered 50 here. Job URL: same .GBL?Page=HRS_APP_JBPST_FL&Action=U&SiteId=1&FOCUS=Applicant&JobOpeningId=<id>&PostingSeq=1 (short form https://hr.myu.umn.edu/jobs/ext/<id>). hr.umn.edu itself 403s."
+    },
+    "verified": "2026-11-18",
+    "notes": "Lab titles: Researcher 1-3, Research Professional 1-2.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "rochester",
+    "name": "University of Rochester (incl. URMC)",
+    "category": "University",
+    "careersUrl": "https://rochester.wd5.myworkdayjobs.com/UR_Staff",
+    "ats": {
+      "type": "workday",
+      "host": "rochester.wd5.myworkdayjobs.com",
+      "tenant": "rochester",
+      "site": "UR_Staff"
+    },
+    "verified": "2026-11-18",
+    "notes": "Separate nursing site UR_Nursing; faculty on Interfolio.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "georgetown",
+    "name": "Georgetown University (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+    "ats": {
+      "type": "workday",
+      "host": "georgetown.wd1.myworkdayjobs.com",
+      "tenant": "georgetown",
+      "site": "Georgetown_Admin_Careers"
+    },
+    "verified": "2026-11-18",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "umb",
+    "name": "University of Maryland, Baltimore (incl. School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://efzv.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1",
+    "ats": {
+      "type": "oracle",
+      "host": "efzv.fa.us6.oraclecloud.com",
+      "siteNumber": "CX_1"
+    },
+    "verified": "2026-11-18",
+    "notes": "CX_1 = staff; CX_1013 = faculty & postdoc; CX_16 student. Lab titles: Research Assistant/Specialist, Laboratory; Laboratory Research Technician.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "purdue",
+    "name": "Purdue University",
+    "category": "University",
+    "careersUrl": "https://careers.purdue.edu/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://careers.purdue.edu"
+    },
+    "verified": "2026-11-18",
+    "notes": "SuccessFactors Unify site (no data-row HTML); POST /services/recruiting/v1/jobs with session cookie + X-CSRF-Token (from `var CSRFToken` on /search/) returned totalJobs 281 for research.",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "uf",
+    "name": "University of Florida (incl. College of Medicine)",
+    "category": "University",
+    "careersUrl": "https://explore.jobs.ufl.edu/en-us/listing/",
+    "ats": {
+      "type": "link-only",
+      "reason": "PageUp People (not in SCHEMA). GET https://explore.jobs.ufl.edu/en-us/search/?search-keyword=<kw> (also &page=N) -> server-rendered HTML; job anchors <a href=\"/en-us/job/<id>/<slug>\">Title</a> (40 per page). Equivalent to {type:html, url:https://explore.jobs.ufl.edu/en-us/search/?search-keyword={q}, linkPattern:/en-us/job/}. Verified: research technician -> Research Technician - Makino Lab, etc."
+    },
+    "verified": "2026-11-18",
+    "region": "United States",
+    "hq": "US"
+  },
+  {
+    "id": "indiana",
+    "name": "Indiana University (incl. IU School of Medicine)",
+    "category": "University",
+    "careersUrl": "https://hrms.iu.edu/psc/PH1PRD_PUB/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?FOCUS=Applicant&SiteId=1",
+    "ats": {
+      "type": "link-only",
+      "reason": "Oracle PeopleSoft Candidate Gateway (fluid), same 2-step flow as Northwestern: (1) GET https://hrms.iu.edu/psc/PH1PRD_PUB/EMPLOYEE/HRMS/c/HRS_HRAM_FL.HRS_CG_SEARCH_FL.GBL?Page=HRS_APP_SCHJOB_FL&Action=U&FOCUS=Applicant&SiteId=1 (cookie jar; read ICSID, ICStateNum); (2) POST same .GBL with ICAJAX=1&ICNAVTYPEDROPDOWN=0&ICType=Panel&ICElementNum=0&ICStateNum=<n>&ICAction=HRS_SCH_WRK_FLU_HRS_SEARCH_BTN&ICSID=<sid>&HRS_SCH_WRK_HRS_SCH_TEXT100=<kw> -> titles id=SCH_JOB_TITLE$<i>, ids id=HRS_APP_JBSCH_I_HRS_JOB_OPENING_ID$<i>. Job URL ...GBL?Page=HRS_APP_JBPST_FL&Action=U&FOCUS=Applicant&SiteId=1&JobOpeningId=<id>&PostingSeq=1. Verified: research technician -> 15 rows."
+    },
+    "verified": "2026-11-18",
+    "notes": "Lab title: Research Technician (Laboratory Research Assistant).",
+    "region": "United States",
+    "hq": "US"
+  }
+]

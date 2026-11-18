@@ -1,0 +1,576 @@
+[
+  {
+    "id": "ncbs",
+    "name": "National Centre for Biological Sciences (NCBS)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.ncbs.res.in/jobportal/open-position",
+    "ats": {
+      "type": "html",
+      "url": "https://www.ncbs.res.in/jobportal/open-position",
+      "linkPattern": "/jobportal/sites/default/files/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Drupal job portal; each open advertisement is a PDF anchor whose text is the advert title (e.g. 'Advt No.5/2026: Appointment of Project Associate ...'). Result/corrigendum notices share the same pattern, so filter titles containing 'Result'/'Corrigendum'. IMPORTANT: site is behind Anubis proof-of-work bot check that triggers on browser-like 'Mozilla/...' User-Agents; a plain non-browser UA (e.g. 'research-jobs-bot/1.0') gets the real HTML. Detail pages also exist at /jobportal/node/{id}. Centre for Brain and Mind posts separately at https://www.ncbs.res.in/cbm/."
+  },
+  {
+    "id": "instem",
+    "name": "Institute for Stem Cell Science and Regenerative Medicine (inStem)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.instem.res.in/jobportal/open-position",
+    "ats": {
+      "type": "html",
+      "url": "https://www.instem.res.in/jobportal/open-position",
+      "linkPattern": "/\\/jobportal\\/\\d+\\/\\d+$/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Drupal job portal (same platform as NCBS). Title anchors look like /jobportal/552026/170602 ('Recruitment to the post of Project Associate, ... Lab'); companion 'View' (/jobportal/node/{id}) and 'Apply' links are skipped by the regex. Server-rendered HTML."
+  },
+  {
+    "id": "ccamp",
+    "name": "Centre for Cellular and Molecular Platforms (C-CAMP)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.ccamp.res.in/careers",
+    "ats": {
+      "type": "link-only",
+      "reason": "Cloudflare 'Just a moment...' challenge (HTTP 403) on https://www.ccamp.res.in/careers for curl with browser UA."
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "iisc",
+    "name": "Indian Institute of Science (IISc) Bangalore",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iisc.ac.in/careers/contract-project-staff/",
+    "ats": {
+      "type": "link-only",
+      "reason": "WordPress TablePress table (server-rendered). GET https://www.iisc.ac.in/careers/contract-project-staff/ (needs HTTP/1.1; HTTP/2 upgrade header breaks curl) -> <table id='tablepress-174'> rows: td.column-1 = post title (e.g. 'Project Associate', 'Research Associate – I'), td.column-2 = department, td.column-3 = <a href='/wp-content/uploads/YYYY/MM/*.pdf'>Click here</a>, td.column-4 = closing date (DD.MM.YYYY), td.column-5 = 'Open'/'Closed'. Anchor text is always 'Click here', so the generic html adapter would give useless titles; a row-based adapter is needed."
+    },
+    "verified": "2026-11-18",
+    "notes": "Regular/faculty posts at /careers/regular-positions/ and /careers/faculty-recruitment/; postdocs at /careers/postdoctoral-fellowship-programmes/."
+  },
+  {
+    "id": "nbrc",
+    "name": "National Brain Research Centre (NBRC)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.nbrc.ac.in/newweb/careers/current-openings/",
+    "ats": {
+      "type": "link-only",
+      "reason": "WordPress page https://www.nbrc.ac.in/newweb/careers/current-openings/ returns 200 but the body had no opening links on 2026-11-18 (only nav/footer); listing format could not be observed. WP REST /wp-json/wp/v2/pages/564 returns 404."
+    },
+    "verified": "2026-11-18",
+    "notes": "Neuroscience institute (Manesar, Gurgaon). Also see http://www.nbrc.ac.in/newweb/project-employees and faculty positions page."
+  },
+  {
+    "id": "ccmb",
+    "name": "CSIR-Centre for Cellular and Molecular Biology (CCMB)",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.ccmb.res.in/job-notifications/?category=project",
+    "ats": {
+      "type": "link-only",
+      "reason": "WordPress, server-rendered. GET https://www.ccmb.res.in/job-notifications/?category=project (also category=regular|faculty|others) -> repeated cards: <h3 class=\"jn-title\">Notification No.2026/02 for Empanelment of Candidates as Project Staff ...</h3>, 'Posted: <strong>11 Nov 2026</strong>', div.jn-deadline 'Last Date to Apply: 02 Dec 2026', and div.jn-actions <a href='https://www.ccmb.res.in/wp-content/uploads/YYYY/MM/*.pdf'>Click here for detailed notification</a>. Anchor text is generic, so parse h3.jn-title + following PDF link. Page is ~1.2 MB."
+    },
+    "verified": "2026-11-18",
+    "notes": "Online applications at https://recruitment.ccmb.res.in/project_pos/."
+  },
+  {
+    "id": "igib",
+    "name": "CSIR-Institute of Genomics and Integrative Biology (IGIB)",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.igib.res.in/projects_positions.html",
+    "ats": {
+      "type": "link-only",
+      "reason": "Custom PHP table, server-rendered. GET https://pme.igib.res.in/bdmg/Requisition/advt_list.php -> <table> with header Post Code | Scientist | Position | Essential Qualifications | Basic Salary | Experience (months) | Work Description | Desirable Qualification | LastDate; each <tr> has td[0] = <a href=https://pme.igib.res.in/bdmg/ProjectStaffApplication.php?position=PC_xxxxx>PC_xxxxx</a> (unquoted href), td[2] = title e.g. 'Project Associate-I', td[8] = last date e.g. '20-Nov-2026'. Anchor text is the post code, so the generic html adapter would give poor titles; parse td[2] as the title."
+    },
+    "verified": "2026-11-18",
+    "notes": "Regular posts (technician, etc.) are PDFs on https://www.igib.res.in/?q=jobs."
+  },
+  {
+    "id": "nii",
+    "name": "National Institute of Immunology (BRIC-NII)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.nii.res.in/en/announcements",
+    "ats": {
+      "type": "link-only",
+      "reason": "Drupal Views table, server-rendered. GET https://www.nii.res.in/en/announcements (current) or /en/archive-announcements (~670 KB, recent+past) -> <tr> rows with td.views-field-title = 'Advertisement for the position of Project Assistant under ANRF funded project Dr. ...', td.views-field-field-end-date <time datetime='2026-11-14T12:00:00Z'> (closing/archive date), td.views-field-field-up <a href='/sites/default/files/announcement/events/*.pdf'><img alt='{title}'></a>. Anchor has no text (only an img with alt=title), so parse the title cell. Interview results share the table; filter titles starting with 'Advertisement'."
+    },
+    "verified": "2026-11-18",
+    "notes": "No dedicated careers page; JRF/SRF/Project Assistant/RA notices are 'announcements'. PhD admissions also announced here."
+  },
+  {
+    "id": "thsti",
+    "name": "Translational Health Science and Technology Institute (BRIC-THSTI)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://thsti.res.in/en/Jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://recruitment.thsti.in/application/jobs",
+      "linkPattern": "/public/upload/job_pdf/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Recruitment portal is server-rendered; each post is an anchor whose text is the position title (e.g. 'Project Assistant', 'Project Research Scientist-II ( Dr. ... )') linking to the advertisement PDF. Several posts share ONE PDF href, so do not dedupe by URL alone (dedupe by title+href). Public notice page https://thsti.res.in/en/Jobs has <li><h4>{title}</h4><p>{advt no} Last Date: YYYY-MM-DD</p> with generic 'Download Detail' anchors."
+  },
+  {
+    "id": "rgcb",
+    "name": "Rajiv Gandhi Centre for Biotechnology (BRIC-RGCB)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://rgcb.res.in/jobs.php",
+    "ats": {
+      "type": "link-only",
+      "reason": "Custom PHP (Bootstrap cards), server-rendered. GET https://rgcb.res.in/jobs.php -> each opening is a card: date box (div.fs-5 day + 'Oct 2026'), <h5 class='mb-2 text-uppercase fw-bold text-dark'>{advt no}:{title}</h5>, <p class='text-muted'>{summary}</p>, badge 'Last Date: DD-MM-YYYY', then an 'Apply Now' anchor to a relative detail page (e.g. 'adv-2026-mls-23', 'positions'). Anchor text is generic, so parse h5 titles."
+    },
+    "verified": "2026-11-18",
+    "notes": "Thiruvananthapuram. PhD admissions are announced on the same site ('admission')."
+  },
+  {
+    "id": "ils-bhubaneswar",
+    "name": "Institute of Life Sciences (BRIC-ILS), Bhubaneswar",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.ils.res.in/advertisements/",
+    "ats": {
+      "type": "html",
+      "url": "https://www.ils.res.in/advertisements/",
+      "linkPattern": "/\\/wp-content\\/uploads\\/\\d{4}\\/\\d{2}\\/Adv/"
+    },
+    "verified": "2026-11-18",
+    "notes": "WordPress, server-rendered; anchor text is the full advert title ('Advertisement for the position of Project Associate-II vide Advt No. 39/2026.'). Regex keeps Advt-*.pdf / AdvPhD-*.pdf and drops shortlisted/selected notices. Page also contains older (2025) adverts (~130 matches) - filter by upload year/month in the href. PhD (JRF) admissions are advertised here too."
+  },
+  {
+    "id": "iiser-pune",
+    "name": "IISER Pune",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iiserpune.ac.in/opportunities/openings",
+    "ats": {
+      "type": "html",
+      "url": "https://www.iiserpune.ac.in/opportunities/openings",
+      "linkPattern": "/opportunities/opening?id="
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered; one anchor per opening with bilingual Hindi/English title text (e.g. '\"परियोजना सहयोगी-I / Project Associate-I\"'). Consider keeping only the text after ' / '. Archived openings at ?archived=true."
+  },
+  {
+    "id": "iiser-kolkata",
+    "name": "IISER Kolkata",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iiserkol.ac.in/web/en/announcements/jobs/",
+    "ats": {
+      "type": "link-only",
+      "reason": "https://www.iiserkol.ac.in/web/en/announcements/jobs/ returns 200 but the raw HTML contains no job anchors (list not server-rendered; no discoverable JSON endpoint in page scripts). Advert PDFs live under https://www.iiserkol.ac.in/web/assets/advertisements/{ts}_adv_{pi}_{jrf|ra|pa}_{mon}_{yyyy}.pdf. https://apply.iiserkol.ac.in/career.html only has 2024 postdoc ads."
+    },
+    "verified": "2026-11-18",
+    "notes": "Project JRF/RA/PA ads are frequent (Biological Sciences dept)."
+  },
+  {
+    "id": "iiser-mohali",
+    "name": "IISER Mohali",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://web.iisermohali.ac.in/noticeportal/iiserm-project-openings",
+    "ats": {
+      "type": "html",
+      "url": "https://web.iisermohali.ac.in/noticeportal/iiserm-project-openings",
+      "linkPattern": "/noticeportal/iiserm-project-openings/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Joomla notice portal, server-rendered, 10 items per page (?start=10, 20 ...); anchor text = full notice title ('Application for the position of Project Associate II for a DBT-funded project'). Pagination links (?start=) don't contain the trailing slash so they are excluded. Non-teaching posts at https://www.iisermohali.ac.in/non-faculty-positions."
+  },
+  {
+    "id": "iiser-bhopal",
+    "name": "IISER Bhopal",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iiserb.ac.in/join_iiserb",
+    "ats": {
+      "type": "link-only",
+      "reason": "Project (R&D) vacancy PDFs are hosted at https://www.iiserb.ac.in/assets_external/vacancy/r&d/{md5}.pdf but no server-rendered listing page linking them was found (https://www.iiserb.ac.in/dofa/vacancy only lists institute PDF (postdoc) ads as assets_external/dofa/*.pdf; research.iiserb.ac.in has no vacancy list)."
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "iiser-tvm",
+    "name": "IISER Thiruvananthapuram",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iisertvm.ac.in/openings",
+    "ats": {
+      "type": "html",
+      "url": "https://www.iisertvm.ac.in/openings",
+      "linkPattern": "/openings/read/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered; anchor text = notice title ('Recruitment for the post of Project Assistant in an externally funded project ...'). Category filters: /openings/active_openings?post_category=Project|Administration."
+  },
+  {
+    "id": "iiser-tirupati",
+    "name": "IISER Tirupati",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iisertirupati.ac.in/jobs/",
+    "ats": {
+      "type": "html",
+      "url": "https://www.iisertirupati.ac.in/jobs/",
+      "linkPattern": "/jobs/advt_"
+    },
+    "verified": "2026-11-18",
+    "notes": "WordPress, server-rendered. Each advert has two anchors with the same href: one with the full title ('Advertisement No.: (91/2026) – Recruitment for the post of \"Project Associate-I / Junior Research Fellow\" ...') and one 'Click Here' - dedupe by href and keep the longer text."
+  },
+  {
+    "id": "iiser-berhampur",
+    "name": "IISER Berhampur",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iiserbpr.ac.in/opportunity/contractual",
+    "ats": {
+      "type": "html",
+      "url": "https://www.iiserbpr.ac.in/opportunity/contractual",
+      "linkPattern": "/\\/webcontrol\\/uploads\\/job\\/(?!.*Biodata)/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered; anchor text = 'Advertisement for Junior Research Fellow (JRF)-BRNS103' etc. Each advert has a companion 'Biodata' form link under the same path - excluded by the negative lookahead. Hrefs contain raw spaces and '&' - URL-encode before fetching. Page is ~310 KB and includes older adverts. PhD admissions: /opportunity/phd-admissions."
+  },
+  {
+    "id": "tifr",
+    "name": "Tata Institute of Fundamental Research (TIFR)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.tifr.res.in/positions",
+    "ats": {
+      "type": "link-only",
+      "reason": "https://www.tifr.res.in/positions is a static PHP page with no per-opening anchors in raw HTML. TIFR Hyderabad uses a Laravel portal https://tifrrecruitment.tifrh.res.in/rp/advertisement (anchors are generic 'Apply' -> /apply-now/{n} and notification PDFs under /storage/uploads/jobs/TIFRH_ADVT_YYYY_NN/)."
+    },
+    "verified": "2026-11-18",
+    "notes": "Biology project posts in Mumbai are mostly advertised by individual departments (DBS); NCBS (a TIFR centre) is listed separately."
+  },
+  {
+    "id": "actrec",
+    "name": "ACTREC - Tata Memorial Centre",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://actrec.gov.in/jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://actrec.gov.in/jobs",
+      "linkPattern": "/sites/default/files/20"
+    },
+    "verified": "2026-11-18",
+    "notes": "Drupal, server-rendered; anchor text = post title ('Interview for the post Project Research Scientist–I (NM) (01)', 'walk in interview for the post of Research Assistant (01)'). Results lists share the path - filter titles that do not mention 'post'/'interview'. JRF/PhD programme at https://actrec.gov.in/jrf-2027. Navi Mumbai (Kharghar)."
+  },
+  {
+    "id": "nimhans",
+    "name": "National Institute of Mental Health and Neurosciences (NIMHANS)",
+    "category": "Medical School / Hospital",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://nimhans.ac.in/careers/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Unreachable on 2026-11-18: https://nimhans.ac.in/careers/ 308-redirects to https://www.nimhans.ac.in/careers which timed out (0 bytes in 20 s, twice; WebFetch also timed out at 60 s). Listing format could not be checked."
+    },
+    "verified": "2026-11-18",
+    "notes": "Frequent JRF/Project Assistant/Research Assistant posts in neuroscience, neurophysiology and psychiatry projects. Very slow site."
+  },
+  {
+    "id": "jncasr",
+    "name": "Jawaharlal Nehru Centre for Advanced Scientific Research (JNCASR)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.jncasr.ac.in/openings",
+    "ats": {
+      "type": "html",
+      "url": "https://www.jncasr.ac.in/openings",
+      "linkPattern": "/^\\/openings\\/(?!archive)[a-z0-9-]+$/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Drupal, server-rendered; each opening has a detail-page anchor /openings/{slug} with the post title plus a PDF anchor under /sites/default/files/Join_Us/Opportunities/YYYY-MM/. Regex keeps the detail pages and skips /openings/archive-openings. Molecular Biology & Genetics and Neuroscience units post project JRF/RA roles here."
+  },
+  {
+    "id": "ashoka",
+    "name": "Ashoka University",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://careers.ashoka.edu.in/research-assistants-research-associate-field-assistants-junior-research-fellows-post-doctoral-fellows-interns/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Darwinbox (candidatev2). Working request: POST https://hrmsashoka.darwinbox.in/ms/candidateapi/job/alljobs, header Content-Type: application/json, body {\"limit\":100,\"offset\":0} (no auth/cookies needed) -> {status:'success', job_counts:33, data:[{id:'a6afa91677778c', title, designation_display_name, officelocation_show_arr:'Sonipat, Sonipat, Haryana, India (ASH_O_SON)', department_name_only, created_on:'2026-11-16T05:15:19.000Z', posted_on:1794767400 (unix s), experience, jd (HTML-escaped)}]}. 'search'/'offset' body keys appear to be ignored - request limit>=job_counts and filter locally. Job URL = https://hrmsashoka.darwinbox.in/ms/candidatev2/main/careers/jobDetails/{id}. NOTE: the Darwinbox board is mostly admin staff; lab research roles (RA, JRF, EEG/Zebrafish technician) are on the WordPress page in careersUrl as <p>{Title} (Last date ...): <a href='/wp-content/uploads/YYYY/MM/*.pdf'>Click here for JD</a></p> (generic anchor text; title is the <p> text before the colon)."
+    },
+    "verified": "2026-11-18",
+    "notes": "Sonipat (Delhi-NCR). Biology & Psychology depts (Trivedi School of Biosciences) post RA/JRF/technician roles on the research positions page. Faculty via Interfolio https://apply.interfolio.com/42575/positions."
+  },
+  {
+    "id": "azim-premji-university",
+    "name": "Azim Premji University",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://azimpremjiuniversity.edu.in/jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://azimpremjiuniversity.edu.in/jobs",
+      "linkPattern": "/\\/jobs\\/(?!index$)[a-z0-9-]+$/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered; one anchor per opening (/jobs/{slug}, text = title). Filter facet links (/jobs/role:..., /jobs/at:...) are excluded by the regex (colon). Mostly faculty/education roles; biology faculty and occasional research associate roles."
+  },
+  {
+    "id": "iit-bombay",
+    "name": "IIT Bombay (IRCC project positions)",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://rnd.iitb.ac.in/jobs",
+    "ats": {
+      "type": "link-only",
+      "reason": "Current project openings live in an SAP Web Dynpro app https://ep.iitb.ac.in/jobsearch (server state + JS, no anchors or JSON in raw HTML). https://rnd.iitb.ac.in/jobs is Drupal and server-rendered but only lists results/shortlist PDFs (/sites/default/files/YYYY-MM/*.pdf), not open adverts."
+    },
+    "verified": "2026-11-18",
+    "notes": "Biosciences & Bioengineering (BSBE) project JRF/RA/Project Assistant posts appear in the IRCC job search."
+  },
+  {
+    "id": "iit-delhi",
+    "name": "IIT Delhi (IRD project positions)",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://ird.iitd.ac.in/current-openings",
+    "ats": {
+      "type": "link-only",
+      "reason": "React SPA backed by a public JSON API. Working request: GET https://ird.iitd.ac.in/api/project-positions (Accept: application/json, no auth) -> JSON array (~625 items incl. expired, ~310 KB) of {id, AdvtNo:'IITD-IRD-325-2026', ProjectTitle (project name, not post title), DeptCentre:'Department of Biochemical Engineering & Biotechnology', PIName, WalkIn:'Yes'|'No', LastDate:'2026-11-29T18:30:00.000Z', FilePath:'uploadsProjectPositions/project_position_...pdf', created_at}. Advert PDF = https://ird.iitd.ac.in/api/{FilePath}. Filter LastDate >= today and DeptCentre ~ /Bio|Kusuma School of Biological Sciences/. Post names (JRF/Project Associate) are only inside the PDF."
+    },
+    "verified": "2026-11-18",
+    "notes": "Also /api/shortlisted-candidates and /api/selected-candidates exist."
+  },
+  {
+    "id": "iit-madras",
+    "name": "IIT Madras (ICSR project staff)",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://icsrstaff.iitm.ac.in/careers/current_openings.php",
+    "ats": {
+      "type": "link-only",
+      "reason": "Angular SPA (Velzon template); raw HTML at https://icsrstaff.iitm.ac.in/careers/current_openings.php has no listings and no discoverable public JSON endpoint was confirmed."
+    },
+    "verified": "2026-11-18",
+    "notes": "Biotechnology dept project JRF/Project Associate posts go through the ICSR staff portal."
+  },
+  {
+    "id": "csir-cdri",
+    "name": "CSIR-Central Drug Research Institute (CDRI)",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://cdri.res.in/",
+    "ats": {
+      "type": "html",
+      "url": "https://cdri.res.in/",
+      "linkPattern": "/pdf\\/recruitment\\/[Aa]dvt/"
+    },
+    "verified": "2026-11-18",
+    "notes": "ASP.NET site; recruitment notices are only in the homepage 'Recruitment' ticker (no separate listing page; Recruitment.aspx redirects to an application stub). Anchor text is bilingual Hindi / English ('प्रोजेक्ट स्टाफ की भर्ती हेतु विज्ञापन संख्या 09/2026/ Advertisement No 09/2026 for project staff'); keep the English half. Regex skips results/shortlists (pdf/recruitment/selection/...). Lucknow."
+  },
+  {
+    "id": "csir-iicb",
+    "name": "CSIR-Indian Institute of Chemical Biology (IICB)",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iicb.res.in/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Unreachable on 2026-11-18: https://www.iicb.res.in/ and https://iicb.res.in/ failed (proxy CONNECT 503 / no response), so the vacancy page format could not be checked."
+    },
+    "verified": "2026-11-18",
+    "notes": "Kolkata. Project JRF/SRF/Project Associate posts in cell biology, neuroscience and infectious disease."
+  },
+  {
+    "id": "csir-iict",
+    "name": "CSIR-Indian Institute of Chemical Technology (IICT)",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.iict.res.in/CAREERS",
+    "ats": {
+      "type": "link-only",
+      "reason": "Server-rendered tabs on https://www.iict.res.in/CAREERS: div#Permanent, div#Fellows (Research Fellows), div#Interview (Walk-in PA/SPA/RA), div#Archpar; each item is <tr><td>{description text}<br><a href='career/{file}_{ts}.pdf'>{file name}.pdf</a></td></tr>. Anchor text is the PDF filename, not the post title, so parse the td text. Fellows and Walk-in tabs were empty on 2026-11-18."
+    },
+    "verified": "2026-11-18",
+    "notes": "Hyderabad."
+  },
+  {
+    "id": "icmr-niv",
+    "name": "ICMR-National Institute of Virology (NIV), Pune",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://niv.icmr.gov.in/show_content.php?lang=1&level=1&ls_id=285&lid=354",
+    "ats": {
+      "type": "link-only",
+      "reason": "Server-rendered PHP CMS. GET https://niv.icmr.gov.in/show_content.php?lang=1&level=1&ls_id=285&lid=354 -> div#vacancyTable <table>: each <tr> td[0] = 'Name of Vacancy' (title text), td[1] = Last Date (or 'N/A'), td[2] = <a href='WriteReadData/T45218/{ts}.pdf'><img alt='View PDF'></a>. Anchor has no text, so parse td[0]. Only 1 item (an admission list) was listed on 2026-11-18; an archive tab exists (button#archive)."
+    },
+    "verified": "2026-11-18",
+    "notes": "niv.icmr.org.in redirects to niv.icmr.gov.in. Several ICMR institutes use the same NIC CMS (show_content.php + WriteReadData/), so the same parser should work for them."
+  },
+  {
+    "id": "bric",
+    "name": "Biotechnology Research and Innovation Council (BRIC, DBT)",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.bric.nic.in/",
+    "ats": {
+      "type": "link-only",
+      "reason": "WordPress site with no jobs listing page; recruitment notices appear as homepage ticker posts (https://www.bric.nic.in/{slug}/), mostly BRIC Secretariat admin posts. WP REST API is locked (401). Lab openings are posted by each BRIC institute (NII, THSTI, RGCB, ILS, NBRC, inStem, NIBMG, etc.), listed as separate entries."
+    },
+    "verified": "2026-11-18",
+    "notes": "Umbrella body for the 14 former DBT autonomous institutes."
+  },
+  {
+    "id": "aiims-delhi",
+    "name": "All India Institute of Medical Sciences (AIIMS), New Delhi",
+    "category": "Medical School / Hospital",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.aiims.edu/index.php/en/notices/recruitment/aiims-recruitment",
+    "ats": {
+      "type": "html",
+      "url": "https://www.aiims.edu/index.php/en/notices/recruitment/aiims-recruitment",
+      "linkPattern": "aiims-recruitment?id="
+    },
+    "verified": "2026-11-18",
+    "notes": "Joomla, server-rendered (~210 KB). Each notice is an anchor ?id={n} whose text is bilingual Hindi/English (e.g. 'भर्ती सूचना - पद प्रोजेक्ट असिस्टेंट/Recruitment Notice - Post Project Assistant'); most are ICMR/DBT-funded project posts (JRF, Project Assistant, Project Research Scientist, Senior Project Associate). Advert PDFs live under /images/pdf/recruitment/advertisement/. Research section: https://research.aiims.edu/."
+  },
+  {
+    "id": "manipal-mahe",
+    "name": "Manipal Academy of Higher Education (MAHE)",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.manipal.edu/mu/important-links/careers-mu/jobs-at-mahe-current-vacancies-/research-positions.html",
+    "ats": {
+      "type": "link-only",
+      "reason": "Next.js (App Router) site, server-rendered but ~1.2 MB and slow (main careers page timed out at 20 s). Research positions page renders cards: <span>Last Date to Apply: DD-MM-YYYY</span>, campus <span> (e.g. 'Manipal Institute of Technology (MIT), Manipal'), title <span class='... text-[20px] md:text-[30px] ...'>Research Associate</span>, then <a href='/career/faculty-positions-collection/{slug}'>View More Details</a>. Anchor text is generic; title is the slug or the preceding span. No JobPosting JSON-LD on detail pages."
+    },
+    "verified": "2026-11-18",
+    "notes": "Applications by email to jobs.research@manipal.edu with job code. Life-science JRF/RA roles at Manipal School of Life Sciences, KMC, MCBR."
+  },
+  {
+    "id": "amrita",
+    "name": "Amrita Vishwa Vidyapeetham",
+    "category": "University",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.amrita.edu/jobs/",
+    "ats": {
+      "type": "html",
+      "url": "https://www.amrita.edu/jobs/",
+      "linkPattern": "amrita.edu/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "WordPress, server-rendered (~520 KB). Each job has a title anchor ('Postdoctoral Fellowship at Department of Mechanical Engineering, Coimbatore') and a 'View Details' anchor with the same href - dedupe by href. Includes JRF/Research Assistant/Project roles at the School of Biotechnology (Amritapuri) and AIMS Kochi; detail pages /job/{slug}/."
+  },
+  {
+    "id": "bose-institute",
+    "name": "Bose Institute",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://jcbose.ac.in/vacant-positions",
+    "ats": {
+      "type": "link-only",
+      "reason": "Server-rendered (CodeIgniter/Bootstrap). GET https://jcbose.ac.in/vacant-positions -> accordion panel div#collapsecurrent ('Open positions') with <table>: columns Advertisement Number | Position | Nature | Mode | Last Date | Status. td[0] = <a href='https://jcbose.ac.in/uploads/ADVT/26/p_{n}.pdf'>S/PHY/11/2026-27</a> (anchor text = advert number), td[1] = position with <br/> ('Junior Research<br/>Fellow (JRF): One (01) position'), td[4] = 'DD/MM/YYYY 11:59 PM', td[5] = links to corrigenda/results (p_{n}_up_{k}.pdf). Parse td[1] for the title; later panels hold archived ads."
+    },
+    "verified": "2026-11-18",
+    "notes": "Kolkata. PhD admissions (BI/JRF/..) are in the same table."
+  },
+  {
+    "id": "csir-imtech",
+    "name": "CSIR-Institute of Microbial Technology (IMTech)",
+    "category": "Government Lab",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.imtech.res.in/en/recruitment",
+    "ats": {
+      "type": "link-only",
+      "reason": "Laravel site; https://www.imtech.res.in/en/recruitment renders a table (Advertisement No. | Description | Opening Date | Closing Date | Details) that had no rows in the raw HTML on 2026-11-18 (either no openings or rows loaded later). Archive at /en/recruitment/archived-jobs. Could not confirm a per-opening anchor pattern."
+    },
+    "verified": "2026-11-18",
+    "notes": "Chandigarh."
+  },
+  {
+    "id": "nibmg",
+    "name": "National Institute of Biomedical Genomics (BRIC-NIBMG)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.nibmg.ac.in/p/career",
+    "ats": {
+      "type": "html",
+      "url": "https://www.nibmg.ac.in/p/career",
+      "linkPattern": "/\\/uploads\\/[0-9a-f]{32}\\.pdf/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered; anchor text = notice ('Applications are invited for RA-I, JRF, SRF against Advertisement No. NIBMG/ADMIN/ESTB/2026-...'). Same PDF can appear several times, some with empty text - dedupe by href and drop empty titles; shortlist notices share the pattern (filter 'Shortlisted'). Kalyani, West Bengal. PhD admissions also posted here."
+  },
+  {
+    "id": "nipgr",
+    "name": "National Institute of Plant Genome Research (BRIC-NIPGR)",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://nipgr.ac.in/nipgrv4/latest-vacancies/",
+    "ats": {
+      "type": "link-only",
+      "reason": "WordPress TablePress table (same structure as IISc). GET https://nipgr.ac.in/nipgrv4/latest-vacancies/ (~750 KB) -> <tr class='row-N'>: td.column-1 = full notice text ('Walk-in-Interview on Thursday, December 10, 2026 ... for the post of Project Associate-I (PA-I) 01 post: Under Dr. Shailesh Kumar'), td.column-3 = <a href='https://nipgr.ac.in/nipgrv4/wp-content/uploads/YYYY/MM/Advt_*.pdf'>VIEW</a>, td.column-4 = application form .docx. Anchor text is 'VIEW', so parse td.column-1. A generic TablePress adapter would cover IISc and NIPGR."
+    },
+    "verified": "2026-11-18",
+    "notes": "New Delhi. Plant molecular biology; many RA/PA/JRF walk-ins. www.nipgr.ac.in meta-refreshes to /nipgrv4/."
+  },
+  {
+    "id": "icgeb-new-delhi",
+    "name": "ICGEB New Delhi",
+    "category": "Research Institute",
+    "region": "India",
+    "hq": "IN",
+    "careersUrl": "https://www.icgeb.org/vacancies/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Vacancies are posted on the global ICGEB site (https://www.icgeb.org/vacancies/, linked from https://www.icgeb.res.in/), which returned Cloudflare 'error code: 520' to curl on 2026-11-18. The India site is a static page with no listings."
+    },
+    "verified": "2026-11-18",
+    "notes": "Global ICGEB site also covers Trieste and Cape Town - another (Europe) agent may list it; dedupe. PhD admissions: https://www.icgeb.res.in/phd2026."
+  }
+]

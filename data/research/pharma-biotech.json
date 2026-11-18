@@ -1,0 +1,947 @@
+[
+  {
+    "id": "pfizer",
+    "name": "Pfizer",
+    "category": "Pharma",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://pfizer.wd1.myworkdayjobs.com/PfizerCareers",
+    "ats": {
+      "type": "workday",
+      "host": "pfizer.wd1.myworkdayjobs.com",
+      "tenant": "pfizer",
+      "site": "PfizerCareers"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "novartis",
+    "name": "Novartis",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "CH",
+    "careersUrl": "https://novartis.wd3.myworkdayjobs.com/Novartis_Careers",
+    "ats": {
+      "type": "workday",
+      "host": "novartis.wd3.myworkdayjobs.com",
+      "tenant": "novartis",
+      "site": "Novartis_Careers"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "roche",
+    "name": "Roche / Genentech",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "CH",
+    "careersUrl": "https://roche.wd3.myworkdayjobs.com/roche-ext",
+    "ats": {
+      "type": "workday",
+      "host": "roche.wd3.myworkdayjobs.com",
+      "tenant": "roche",
+      "site": "roche-ext"
+    },
+    "verified": "2026-11-18",
+    "notes": "Global Roche site incl. Genentech (South San Francisco) postings; careers.roche.com front-end."
+  },
+  {
+    "id": "astrazeneca",
+    "name": "AstraZeneca",
+    "category": "Pharma",
+    "region": "United Kingdom",
+    "hq": "GB",
+    "careersUrl": "https://astrazeneca.wd3.myworkdayjobs.com/Careers",
+    "ats": {
+      "type": "workday",
+      "host": "astrazeneca.wd3.myworkdayjobs.com",
+      "tenant": "astrazeneca",
+      "site": "Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Includes Alexion. Front-end careers.astrazeneca.com."
+  },
+  {
+    "id": "gsk",
+    "name": "GSK",
+    "category": "Pharma",
+    "region": "United Kingdom",
+    "hq": "GB",
+    "careersUrl": "https://gsk.wd5.myworkdayjobs.com/GSKCareers",
+    "ats": {
+      "type": "workday",
+      "host": "gsk.wd5.myworkdayjobs.com",
+      "tenant": "gsk",
+      "site": "GSKCareers"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "jnj-innovative-medicine",
+    "name": "Johnson & Johnson Innovative Medicine",
+    "category": "Pharma",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jj.wd5.myworkdayjobs.com/JJ",
+    "ats": {
+      "type": "workday",
+      "host": "jj.wd5.myworkdayjobs.com",
+      "tenant": "jj",
+      "site": "JJ"
+    },
+    "verified": "2026-11-18",
+    "notes": "Shared J&J portal (Innovative Medicine + MedTech); front-end careers.jnj.com."
+  },
+  {
+    "id": "merck-msd",
+    "name": "Merck & Co. (MSD)",
+    "category": "Pharma",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://msd.wd5.myworkdayjobs.com/SearchJobs",
+    "ats": {
+      "type": "workday",
+      "host": "msd.wd5.myworkdayjobs.com",
+      "tenant": "msd",
+      "site": "SearchJobs"
+    },
+    "verified": "2026-11-18",
+    "notes": "Front-end jobs.merck.com / msdcareers."
+  },
+  {
+    "id": "eli-lilly",
+    "name": "Eli Lilly and Company",
+    "category": "Pharma",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://lilly.wd115.myworkdayjobs.com/LLY",
+    "ats": {
+      "type": "workday",
+      "host": "lilly.wd115.myworkdayjobs.com",
+      "tenant": "lilly",
+      "site": "LLY"
+    },
+    "verified": "2026-11-18",
+    "notes": "Note non-standard wd115 data centre. Front-end careers.lilly.com is Phenom (phApp.ddo works: https://careers.lilly.com/us/en/search-results)."
+  },
+  {
+    "id": "sanofi",
+    "name": "Sanofi",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "FR",
+    "careersUrl": "https://sanofi.wd3.myworkdayjobs.com/SanofiCareers",
+    "ats": {
+      "type": "workday",
+      "host": "sanofi.wd3.myworkdayjobs.com",
+      "tenant": "sanofi",
+      "site": "SanofiCareers"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "abbvie",
+    "name": "AbbVie",
+    "category": "Pharma",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.abbvie.com/en/jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://careers.abbvie.com/en/jobs?q={q}",
+      "linkPattern": "/en/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Server-rendered list; job hrefs like /en/job/scientist-i-in-north-chicago-il-jid-35695. Includes Cerevel and Allergan."
+  },
+  {
+    "id": "bms",
+    "name": "Bristol Myers Squibb",
+    "category": "Pharma",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://bristolmyerssquibb.wd5.myworkdayjobs.com/BMS",
+    "ats": {
+      "type": "workday",
+      "host": "bristolmyerssquibb.wd5.myworkdayjobs.com",
+      "tenant": "bristolmyerssquibb",
+      "site": "BMS"
+    },
+    "verified": "2026-11-18",
+    "notes": "Front-end careers.bms.com."
+  },
+  {
+    "id": "amgen",
+    "name": "Amgen",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://amgen.wd1.myworkdayjobs.com/Careers",
+    "ats": {
+      "type": "workday",
+      "host": "amgen.wd1.myworkdayjobs.com",
+      "tenant": "amgen",
+      "site": "Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Front-end careers.amgen.com."
+  },
+  {
+    "id": "biogen",
+    "name": "Biogen",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://biibhr.wd3.myworkdayjobs.com/external",
+    "ats": {
+      "type": "workday",
+      "host": "biibhr.wd3.myworkdayjobs.com",
+      "tenant": "biibhr",
+      "site": "external"
+    },
+    "verified": "2026-11-18",
+    "notes": "Neuroscience-focused."
+  },
+  {
+    "id": "regeneron",
+    "name": "Regeneron",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://regeneron.wd1.myworkdayjobs.com/Careers",
+    "ats": {
+      "type": "workday",
+      "host": "regeneron.wd1.myworkdayjobs.com",
+      "tenant": "regeneron",
+      "site": "Careers"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "vertex",
+    "name": "Vertex Pharmaceuticals",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://vrtx.wd501.myworkdayjobs.com/Vertex_Careers",
+    "ats": {
+      "type": "workday",
+      "host": "vrtx.wd501.myworkdayjobs.com",
+      "tenant": "vrtx",
+      "site": "Vertex_Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Note wd501 data centre."
+  },
+  {
+    "id": "gilead",
+    "name": "Gilead Sciences",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://gilead.wd1.myworkdayjobs.com/gileadcareers",
+    "ats": {
+      "type": "workday",
+      "host": "gilead.wd1.myworkdayjobs.com",
+      "tenant": "gilead",
+      "site": "gileadcareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Includes Kite."
+  },
+  {
+    "id": "takeda",
+    "name": "Takeda",
+    "category": "Pharma",
+    "region": "Other",
+    "hq": "JP",
+    "careersUrl": "https://jobs.takeda.com/search-jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://jobs.takeda.com/search-jobs?k={q}",
+      "linkPattern": "/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Radancy TalentBrew site; server-rendered results, job hrefs like /job/boston/associate-scientist-global-sample-management/1113/103278362656. Paging &p=2."
+  },
+  {
+    "id": "bayer",
+    "name": "Bayer",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "DE",
+    "careersUrl": "https://bayer.wd103.myworkdayjobs.com/Bayer_External_Career_Site",
+    "ats": {
+      "type": "workday",
+      "host": "bayer.wd103.myworkdayjobs.com",
+      "tenant": "bayer",
+      "site": "Bayer_External_Career_Site"
+    },
+    "verified": "2026-11-18",
+    "notes": "Note wd103 data centre. Front-end jobs.bayer.com."
+  },
+  {
+    "id": "boehringer-ingelheim",
+    "name": "Boehringer Ingelheim",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "DE",
+    "careersUrl": "https://jobs.boehringer-ingelheim.com/search/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://jobs.boehringer-ingelheim.com"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "novo-nordisk",
+    "name": "Novo Nordisk",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "DK",
+    "careersUrl": "https://www.novonordisk.com/careers/find-a-job/career-search-results.html",
+    "ats": {
+      "type": "link-only",
+      "reason": "Novo Nordisk AEM JSON API: GET https://www.novonordisk.com/bin/nncorp/careersearch?keyword=scientist&country=&category=&locale=en -> {data:{totalMatches, jobs:[{jobId:'346936.en_GB', jobTitle, jobLocationLabel:'Denmark, Måløv', jobCountry:{label}, jobCategory:{label}, jobSubCategory:{label}, jobCity:{label}}]}} (all matches returned, no paging params; no posted date). Job URL = https://www.novonordisk.com/careers/find-a-job/job-ad.{jobId}.html"
+    },
+    "verified": "2026-11-18",
+    "notes": "Endpoint verified 2026-11-18 with curl; needs an adapter."
+  },
+  {
+    "id": "ucb",
+    "name": "UCB",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "BE",
+    "careersUrl": "https://careers.ucb.com/global/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://careers.ucb.com/global/en/search-results"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "lundbeck",
+    "name": "Lundbeck",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "DK",
+    "careersUrl": "https://jobs.lundbeck/search/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://jobs.lundbeck"
+    },
+    "verified": "2026-11-18",
+    "notes": "Neuroscience-focused. Also listed via lundbeck.com/global/careers/your-job/job-opportunities (AEM jobfinder.model.json mirrors the SF feed)."
+  },
+  {
+    "id": "astellas",
+    "name": "Astellas Pharma",
+    "category": "Pharma",
+    "region": "Other",
+    "hq": "JP",
+    "careersUrl": "https://careers.astellas.com/search/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://careers.astellas.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Covers US/Europe; Japan roles (Tsukuba research) are on Avature astellasjapan.avature.net/en_GB/careers (not verified)."
+  },
+  {
+    "id": "eisai",
+    "name": "Eisai",
+    "category": "Pharma",
+    "region": "Other",
+    "hq": "JP",
+    "careersUrl": "https://careers.eisai.com/us/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://careers.eisai.com/us/en/search-results"
+    },
+    "verified": "2026-11-18",
+    "notes": "Eisai US (incl. Cambridge MA neuroscience research). Small number of openings."
+  },
+  {
+    "id": "otsuka",
+    "name": "Otsuka Pharmaceutical",
+    "category": "Pharma",
+    "region": "Other",
+    "hq": "JP",
+    "careersUrl": "https://vhr-otsuka.wd1.myworkdayjobs.com/External",
+    "ats": {
+      "type": "workday",
+      "host": "vhr-otsuka.wd1.myworkdayjobs.com",
+      "tenant": "vhr_otsuka",
+      "site": "External"
+    },
+    "verified": "2026-11-18",
+    "notes": "Otsuka US/Europe; CNS-focused. Note tenant uses underscore (vhr_otsuka) while host uses hyphen."
+  },
+  {
+    "id": "alector",
+    "name": "Alector",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.lever.co/alector",
+    "ats": {
+      "type": "lever",
+      "company": "alector"
+    },
+    "verified": "2026-11-18",
+    "notes": "Neurodegeneration immunology biotech; small number of openings."
+  },
+  {
+    "id": "denali",
+    "name": "Denali Therapeutics",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.denalitherapeutics.com/careers/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Workday host dnli.wd1.myworkdayjobs.com (tenant likely 'dnli') is referenced by third-party listings, but the site name could not be found: Denali_Careers, External, Careers, careers, Denali, DenaliCareers, Denali_Therapeutics, External_Careers all return no jobPostings. Careers page has no job-board link in static HTML."
+    },
+    "verified": "",
+    "notes": "Neurodegeneration biotech, South San Francisco; regularly posts Associate Scientist / Research Associate in vivo and cell biology roles."
+  },
+  {
+    "id": "neurocrine",
+    "name": "Neurocrine Biosciences",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://neurocrine.wd5.myworkdayjobs.com/Neurocrinecareers",
+    "ats": {
+      "type": "workday",
+      "host": "neurocrine.wd5.myworkdayjobs.com",
+      "tenant": "neurocrine",
+      "site": "Neurocrinecareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Neuroscience/endocrinology, San Diego."
+  },
+  {
+    "id": "praxis",
+    "name": "Praxis Precision Medicines",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://job-boards.greenhouse.io/praxisprecisionmedicines",
+    "ats": {
+      "type": "greenhouse",
+      "board": "praxisprecisionmedicines"
+    },
+    "verified": "2026-11-18",
+    "notes": "CNS/epilepsy biotech. Board is dominated by field sales (Account Specialist) roles."
+  },
+  {
+    "id": "voyager",
+    "name": "Voyager Therapeutics",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://job-boards.greenhouse.io/voyagertherapeutics",
+    "ats": {
+      "type": "greenhouse",
+      "board": "voyagertherapeutics"
+    },
+    "verified": "2026-11-18",
+    "notes": "Gene therapy for neuro diseases. Board valid but had 0 open jobs on 2026-11-18."
+  },
+  {
+    "id": "uniqure",
+    "name": "uniQure",
+    "category": "Biotech",
+    "region": "Europe",
+    "hq": "NL",
+    "careersUrl": "https://www.uniqure.com/culture-careers/job-opportunities",
+    "ats": {
+      "type": "greenhouse",
+      "board": "uniqurebiopharmabv"
+    },
+    "verified": "2026-11-18",
+    "notes": "Gene therapy (Huntington's). Embedded via boards.eu.greenhouse.io, but standard boards-api.greenhouse.io/v1/boards/uniqurebiopharmabv/jobs works (boards-api.eu.greenhouse.io did not return JSON)."
+  },
+  {
+    "id": "charles-river",
+    "name": "Charles River Laboratories",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.criver.com/search/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://careers.criver.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Large employer of Research Associate / in vivo technicians. jobs.criver.com is a WordPress marketing front-end; the searchable RMK site is careers.criver.com."
+  },
+  {
+    "id": "labcorp",
+    "name": "Labcorp",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://labcorp.wd1.myworkdayjobs.com/External",
+    "ats": {
+      "type": "workday",
+      "host": "labcorp.wd1.myworkdayjobs.com",
+      "tenant": "labcorp",
+      "site": "External"
+    },
+    "verified": "2026-11-18",
+    "notes": "Includes former Covance drug development / preclinical."
+  },
+  {
+    "id": "thermo-fisher",
+    "name": "Thermo Fisher Scientific",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://thermofisher.wd5.myworkdayjobs.com/ThermoFisherCareers",
+    "ats": {
+      "type": "workday",
+      "host": "thermofisher.wd5.myworkdayjobs.com",
+      "tenant": "thermofisher",
+      "site": "ThermoFisherCareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Includes PPD clinical research and Patheon CDMO. Front-end jobs.thermofisher.com."
+  },
+  {
+    "id": "evotec",
+    "name": "Evotec",
+    "category": "CRO / CDMO",
+    "region": "Europe",
+    "hq": "DE",
+    "careersUrl": "https://evotecgroup.wd3.myworkdayjobs.com/Evotec_Career_Site",
+    "ats": {
+      "type": "workday",
+      "host": "evotecgroup.wd3.myworkdayjobs.com",
+      "tenant": "evotecgroup",
+      "site": "Evotec_Career_Site"
+    },
+    "verified": "2026-11-18",
+    "notes": "Front-end careers.evotec.com (Radancy TalentBrew: /en/search-jobs?k={q}, job hrefs /en/job/...). Sites incl. Abingdon, Alderley Park, Hamburg, Toulouse, Princeton."
+  },
+  {
+    "id": "eurofins",
+    "name": "Eurofins Scientific",
+    "category": "CRO / CDMO",
+    "region": "Europe",
+    "hq": "LU",
+    "careersUrl": "https://careers.eurofins.com/jobs/",
+    "ats": {
+      "type": "smartrecruiters",
+      "companyId": "Eurofins"
+    },
+    "verified": "2026-11-18",
+    "notes": "Very large volume of lab analyst / scientist roles worldwide."
+  },
+  {
+    "id": "wuxi-apptec",
+    "name": "WuXi AppTec (US)",
+    "category": "CRO / CDMO",
+    "region": "Other",
+    "hq": "CN",
+    "careersUrl": "https://careers-wuxiapptec.icims.com/jobs/search",
+    "ats": {
+      "type": "icims",
+      "host": "careers-wuxiapptec.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "US operations (San Diego, Natick, Middletown DE, Philadelphia). Separate chemistry board careers-wuxichemistry.icims.com (not verified)."
+  },
+  {
+    "id": "danaher",
+    "name": "Danaher (Cytiva, Beckman Coulter, Leica, IDT, Molecular Devices, Abcam...)",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://danaher.wd1.myworkdayjobs.com/DanaherJobs",
+    "ats": {
+      "type": "workday",
+      "host": "danaher.wd1.myworkdayjobs.com",
+      "tenant": "danaher",
+      "site": "DanaherJobs"
+    },
+    "verified": "2026-11-18",
+    "notes": "Group-wide Workday for all Danaher operating companies. Front-end jobs.danaher.com is Phenom (phApp.ddo works)."
+  },
+  {
+    "id": "abcam",
+    "name": "Abcam (Danaher)",
+    "category": "Biotech",
+    "region": "United Kingdom",
+    "hq": "GB",
+    "careersUrl": "https://jobs.danaher.com/global/en/search-results?keywords=abcam",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://jobs.danaher.com/global/en/search-results",
+      "companyName": "Abcam"
+    },
+    "verified": "2026-11-18",
+    "notes": "Abcam roles are on the shared Danaher Phenom portal. IMPORTANT: Danaher's Phenom jobs have no companyName field; the subsidiary is in job.opco (e.g. 'Abcam'). Filter on opco. Verified keywords=abcam -> 39 hits all opco 'Abcam'."
+  },
+  {
+    "id": "beckman-coulter-life-sciences",
+    "name": "Beckman Coulter Life Sciences (Danaher)",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.danaher.com/global/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://jobs.danaher.com/global/en/search-results",
+      "companyName": "Beckman Coulter Life Sciences"
+    },
+    "verified": "2026-11-18",
+    "notes": "Shared Danaher Phenom portal; subsidiary is in job.opco ('Beckman Coulter Life Sciences'), not companyName."
+  },
+  {
+    "id": "leica-biosystems",
+    "name": "Leica Biosystems (Danaher)",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.danaher.com/global/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://jobs.danaher.com/global/en/search-results",
+      "companyName": "Leica Biosystems"
+    },
+    "verified": "2026-11-18",
+    "notes": "Shared Danaher Phenom portal; subsidiary is in job.opco ('Leica Biosystems' / 'Leica Microsystems'), not companyName. HQ of Leica Biosystems is Nussloch DE / Deer Park US; listed under Danaher US."
+  },
+  {
+    "id": "bio-techne",
+    "name": "Bio-Techne (R&D Systems, Novus, ACD)",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://biotechne.wd5.myworkdayjobs.com/BioTechne",
+    "ats": {
+      "type": "workday",
+      "host": "biotechne.wd5.myworkdayjobs.com",
+      "tenant": "biotechne",
+      "site": "BioTechne"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "revvity",
+    "name": "Revvity",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.revvity.com/search-jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://jobs.revvity.com/search-jobs?k={q}",
+      "linkPattern": "/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Radancy TalentBrew site (job hrefs /job/{city}/{slug}/20539/{id}). Formerly PerkinElmer life sciences; Cambridge UK, Abingdon, Hopkinton, Lafayette CO. Main revvity.com blocks curl (403)."
+  },
+  {
+    "id": "concept-life-sciences",
+    "name": "Concept Life Sciences (incl. Sygnature Discovery)",
+    "category": "CRO / CDMO",
+    "region": "United Kingdom",
+    "hq": "GB",
+    "careersUrl": "https://www.conceptlifesciences.com/careers",
+    "ats": {
+      "type": "html",
+      "url": "https://alexcreativecreative.github.io/cls-job-feed/jobs.html",
+      "linkPattern": "peoplehr.net/Pages/JobBoard/Opening.aspx"
+    },
+    "verified": "2026-11-18",
+    "notes": "Careers page JS-fetches a static job-feed HTML (hosted on its web agency's GitHub Pages) and injects it; each card has title in .job-card-title-col and apply link to conceptlifesciences.peoplehr.net/Pages/JobBoard/Opening.aspx?v={guid}. No keyword search (filter locally). Sygnature Discovery merged into Concept Life Sciences."
+  },
+  {
+    "id": "oxford-biomedica",
+    "name": "OXB (Oxford Biomedica)",
+    "category": "CRO / CDMO",
+    "region": "United Kingdom",
+    "hq": "GB",
+    "careersUrl": "https://careers.oxb.com/search/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://careers.oxb.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Viral vector CDMO; Oxford UK, Bedford MA, France."
+  },
+  {
+    "id": "fujifilm-cellular-dynamics",
+    "name": "FUJIFILM Cellular Dynamics / FUJIFILM US life sciences",
+    "category": "CRO / CDMO",
+    "region": "Other",
+    "hq": "JP",
+    "careersUrl": "https://uscareers-fujifilm.icims.com/jobs/search",
+    "ats": {
+      "type": "icims",
+      "host": "uscareers-fujifilm.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Shared FUJIFILM US iCIMS board (Cellular Dynamics Madison WI iPSC, FUJIFILM Biotechnologies, Irvine Scientific)."
+  },
+  {
+    "id": "moderna",
+    "name": "Moderna",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://modernatx.wd1.myworkdayjobs.com/M_tx",
+    "ats": {
+      "type": "workday",
+      "host": "modernatx.wd1.myworkdayjobs.com",
+      "tenant": "modernatx",
+      "site": "M_tx"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "alnylam",
+    "name": "Alnylam Pharmaceuticals",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.alnylam.com/careers#jsblk-search",
+    "ats": {
+      "type": "greenhouse",
+      "board": "alnylampharmaceuticals"
+    },
+    "verified": "2026-11-18",
+    "notes": "Careers page JS (themes/custom/alnylam/js/job-search.js) reads api.greenhouse.io/v1/boards/alnylampharmaceuticals/jobs."
+  },
+  {
+    "id": "ionis",
+    "name": "Ionis Pharmaceuticals",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://recruiting.ultipro.com/ISI1000ISIS/JobBoard/14a66400-68fa-4847-8593-af776328cfd2/",
+    "ats": {
+      "type": "ultipro",
+      "host": "recruiting.ultipro.com",
+      "tenant": "ISI1000ISIS",
+      "boardId": "14a66400-68fa-4847-8593-af776328cfd2"
+    },
+    "verified": "2026-11-18",
+    "notes": "Antisense/neurology, Carlsbad CA. Verified POST .../JobBoardView/LoadSearchResults with {opportunitySearch:{Top,Skip,QueryString,OrderBy,Filters}} -> {opportunities:[{Title,...}]}."
+  },
+  {
+    "id": "merck-kgaa",
+    "name": "Merck KGaA / EMD Serono / MilliporeSigma",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "DE",
+    "careersUrl": "https://careers.emdgroup.com/us/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://careers.emdgroup.com/us/en/search-results"
+    },
+    "verified": "2026-11-18",
+    "notes": "/global/en redirects to /us/en by geo; /us/en search returns global jobs. Includes healthcare, life science (MilliporeSigma/Sigma-Aldrich) and electronics."
+  },
+  {
+    "id": "biontech",
+    "name": "BioNTech",
+    "category": "Biotech",
+    "region": "Europe",
+    "hq": "DE",
+    "careersUrl": "https://jobs.biontech.com/search/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://jobs.biontech.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Mainz, Berlin, Marburg, Cambridge MA, London."
+  },
+  {
+    "id": "genmab",
+    "name": "Genmab",
+    "category": "Biotech",
+    "region": "Europe",
+    "hq": "DK",
+    "careersUrl": "https://careers.genmab.com/global/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://careers.genmab.com/global/en/search-results",
+      "companyName": "Genmab"
+    },
+    "verified": "2026-11-18"
+  },
+  {
+    "id": "ipsen",
+    "name": "Ipsen",
+    "category": "Pharma",
+    "region": "Europe",
+    "hq": "FR",
+    "careersUrl": "https://ipsen.wd103.myworkdayjobs.com/Ipsen_Careers",
+    "ats": {
+      "type": "workday",
+      "host": "ipsen.wd103.myworkdayjobs.com",
+      "tenant": "ipsen",
+      "site": "Ipsen_Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "careers.ipsen.com redirects here. Note wd103."
+  },
+  {
+    "id": "inotiv",
+    "name": "Inotiv",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://inotivco.wd5.myworkdayjobs.com/EXT",
+    "ats": {
+      "type": "workday",
+      "host": "inotivco.wd5.myworkdayjobs.com",
+      "tenant": "inotivco",
+      "site": "EXT"
+    },
+    "verified": "2026-11-18",
+    "notes": "Preclinical/in vivo CRO and research-model provider (ex-Envigo); many Research Technician / animal technician roles. Front-end careers.inotiv.com."
+  },
+  {
+    "id": "iqvia",
+    "name": "IQVIA (incl. Q2 Solutions labs)",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://iqvia.wd1.myworkdayjobs.com/IQVIA",
+    "ats": {
+      "type": "workday",
+      "host": "iqvia.wd1.myworkdayjobs.com",
+      "tenant": "iqvia",
+      "site": "IQVIA"
+    },
+    "verified": "2026-11-18",
+    "notes": "Front-end jobs.iqvia.com (Radancy TalentBrew). Lab Scientist roles mainly via Q2 Solutions."
+  },
+  {
+    "id": "lonza",
+    "name": "Lonza",
+    "category": "CRO / CDMO",
+    "region": "Europe",
+    "hq": "CH",
+    "careersUrl": "https://lonza.wd3.myworkdayjobs.com/Lonza_Careers",
+    "ats": {
+      "type": "workday",
+      "host": "lonza.wd3.myworkdayjobs.com",
+      "tenant": "lonza",
+      "site": "Lonza_Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "www.lonza.com blocks curl (403); Workday endpoint works directly."
+  },
+  {
+    "id": "recursion",
+    "name": "Recursion Pharmaceuticals",
+    "category": "Biotech",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://job-boards.greenhouse.io/recursionpharmaceuticals",
+    "ats": {
+      "type": "greenhouse",
+      "board": "recursionpharmaceuticals"
+    },
+    "verified": "2026-11-18",
+    "notes": "Includes former Exscientia (Oxford/Milton Park UK)."
+  },
+  {
+    "id": "bicycle-therapeutics",
+    "name": "Bicycle Therapeutics",
+    "category": "Biotech",
+    "region": "United Kingdom",
+    "hq": "GB",
+    "careersUrl": "https://careers.smartrecruiters.com/BicycleTherapeutics",
+    "ats": {
+      "type": "smartrecruiters",
+      "companyId": "BicycleTherapeutics"
+    },
+    "verified": "2026-11-18",
+    "notes": "Cambridge UK and Lexington MA."
+  },
+  {
+    "id": "pharmaron-uk",
+    "name": "Pharmaron (UK & Europe)",
+    "category": "CRO / CDMO",
+    "region": "Other",
+    "hq": "CN",
+    "careersUrl": "https://careerssearch.pharmaron.com/jobs/search",
+    "ats": {
+      "type": "html",
+      "url": "https://careerssearch.pharmaron.com/jobs/search",
+      "linkPattern": "/jobs/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "ApplicantPro/iSolved board for Pharmaron UK/EU sites (Hoddesdon, Ruddington, Cardiff, Germany). keywords= param did not appear to filter, so fetch the full list and filter locally. Job hrefs like https://careerssearch.pharmaron.com/jobs/job/Associate-Principal-Scientist-DMPK/795. US roles on pharmaron.isolvedhire.com/jobs/ (JS-rendered, not verified); China on mokahr."
+  },
+  {
+    "id": "argenx",
+    "name": "argenx",
+    "category": "Biotech",
+    "region": "Europe",
+    "hq": "BE",
+    "careersUrl": "https://argenx.wd3.myworkdayjobs.com/External_Careers",
+    "ats": {
+      "type": "workday",
+      "host": "argenx.wd3.myworkdayjobs.com",
+      "tenant": "argenx",
+      "site": "External_Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Immunology biotech (Ghent BE, Boston). Few lab roles."
+  },
+  {
+    "id": "illumina",
+    "name": "Illumina",
+    "category": "CRO / CDMO",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://illumina.wd1.myworkdayjobs.com/illumina-careers",
+    "ats": {
+      "type": "workday",
+      "host": "illumina.wd1.myworkdayjobs.com",
+      "tenant": "illumina",
+      "site": "illumina-careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Genomics tools; San Diego, Cambridge UK."
+  },
+  {
+    "id": "teva",
+    "name": "Teva Pharmaceuticals",
+    "category": "Pharma",
+    "region": "Other",
+    "hq": "IL",
+    "careersUrl": "https://www.careers.teva/careers",
+    "ats": {
+      "type": "eightfold",
+      "host": "www.careers.teva",
+      "domain": "tevapharm.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Eightfold on custom host. Job URL from canonicalPositionUrl e.g. https://www.careers.teva/careers/job/563602813823457."
+  },
+  {
+    "id": "icon",
+    "name": "ICON plc (incl. ICON central labs)",
+    "category": "CRO / CDMO",
+    "region": "Europe",
+    "hq": "IE",
+    "careersUrl": "https://careers.iconplc.com/search-jobs",
+    "ats": {
+      "type": "html",
+      "url": "https://careers.iconplc.com/search-jobs?k={q}",
+      "linkPattern": "/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Radancy TalentBrew; use k= (keywords= is ignored). Mostly clinical-research roles; lab analyst roles in Assen NL / central labs. Job hrefs /job/{city}/{slug}/3784/{id}."
+  }
+]

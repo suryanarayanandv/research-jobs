@@ -1,0 +1,802 @@
+[
+  {
+    "id": "hhmi",
+    "name": "Howard Hughes Medical Institute (HHMI, incl. Janelia Research Campus)",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://hhmi.wd1.myworkdayjobs.com/External",
+    "ats": {
+      "type": "workday",
+      "host": "hhmi.wd1.myworkdayjobs.com",
+      "tenant": "hhmi",
+      "site": "External"
+    },
+    "verified": "2026-11-18",
+    "notes": "Single Workday board covers HHMI HQ, Janelia Research Campus (Ashburn, VA) and HHMI investigator labs hosted at universities/hospitals (e.g. Boston Children's). Location text distinguishes Janelia."
+  },
+  {
+    "id": "scripps-research",
+    "name": "Scripps Research",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://recruiting2.ultipro.com/SCR1003TSRI/JobBoard/98759e7d-7ede-4c0b-ac7b-2c6293c7b522/",
+    "ats": {
+      "type": "ultipro",
+      "host": "recruiting2.ultipro.com",
+      "tenant": "SCR1003TSRI",
+      "boardId": "98759e7d-7ede-4c0b-ac7b-2c6293c7b522"
+    },
+    "verified": "2026-11-18",
+    "notes": "La Jolla, CA. Main Scripps Research board (Research Assistant I/II, postdocs). A second board on the same tenant, boardId 5a2b5c2e-5e7c-43c7-a1c9-ea69e44b03f4, is Calibr-Skaggs (translational/drug discovery); verified too, ~8 research hits. Not Scripps Health (separate hospital system)."
+  },
+  {
+    "id": "salk",
+    "name": "Salk Institute for Biological Studies",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.salk.edu/about/careers/open-positions/",
+    "ats": {
+      "type": "ultipro",
+      "host": "recruiting2.ultipro.com",
+      "tenant": "SAL1013SIBS",
+      "boardId": "e9f055e1-a105-4f91-9a67-21aea61655fa"
+    },
+    "verified": "2026-11-18",
+    "notes": "La Jolla, CA. Staff board (Research Assistant/Associate, core techs). Same tenant has a Postdoctoral board boardId 6340e3d6-9512-4def-9fdf-68be001be337 (verified, returns postdoc fellow listings) and a Faculty/Salk Fellows board d9b57f2c-5146-4473-81d4-daf8a634510a."
+  },
+  {
+    "id": "allen-institute",
+    "name": "Allen Institute (incl. Allen Institute for Brain Science / Cell Science / Immunology)",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://alleninstitute.org/careers/jobs",
+    "ats": {
+      "type": "link-only",
+      "reason": "ClearCompany: GET https://careers-api.clearcompany.com/v1/f724f829-c8a2-8b32-a83b-2a479b88b77f (siteId from <script src=careers-content.clearcompany.com/js/v1/career-site.js?siteId=...> on the jobs page) -> JSON {totalCount, currentPageIndex, currentPageCount, results:[{id, userDefinedId, positionTitle, postedDate (ISO), location ('Seattle WA'), locations:[{city, subdivision, country}], departmentName, jobFunctionName, brandName, applyLink, description (HTML)}]}. Returns ALL jobs in one call (43 on 2026-11-18, ~550KB because descriptions are included); no keyword param, filter locally. Job URL = https://alleninstitute.clearcompany.com/careers/jobs/{id} (applyLink adds /apply)."
+    },
+    "verified": "2026-11-18",
+    "notes": "Seattle, WA. Many 'Research Associate I' lab roles (neuroscience, connectomics, imaging). Allen Institute for Brain Science is part of this single board."
+  },
+  {
+    "id": "broad-institute",
+    "name": "Broad Institute of MIT and Harvard",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://broadinstitute.avature.net/careers",
+    "ats": {
+      "type": "avature",
+      "host": "broadinstitute.avature.net",
+      "path": "/en_US/careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Cambridge, MA. Moved from Workday (broadinstitute.wd1.myworkdayjobs.com/broad_institute now redirects to a Workday 'outage' page and the CXS API returns 403). SearchJobs?keywords=research+associate returned '1-6 of 32 results'; detail links look like /en_US/careers/JobDetail/{Slug}/{id}. Confirmed via WebFetch; plain curl through this machine's proxy stalled in the TLS handshake (possible TLS-fingerprint bot filter), and broadinstitute.org/careers returns 403 to curl. Many Research Associate I/II roles (recent-grad pipeline)."
+  },
+  {
+    "id": "whitehead",
+    "name": "Whitehead Institute for Biomedical Research",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://wibr.wd1.myworkdayjobs.com/en-US/WIBR-Careers",
+    "ats": {
+      "type": "workday",
+      "host": "wibr.wd1.myworkdayjobs.com",
+      "tenant": "wibr",
+      "site": "WIBR-Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Cambridge, MA (MIT-affiliated). Entry-level lab roles are titled 'Technical Assistant I/II' rather than research technician. HHMI investigator labs at Whitehead (e.g. Weissman) post on the HHMI Workday board instead."
+  },
+  {
+    "id": "cshl",
+    "name": "Cold Spring Harbor Laboratory",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://cshl.wd12.myworkdayjobs.com/CSHL",
+    "ats": {
+      "type": "workday",
+      "host": "cshl.wd12.myworkdayjobs.com",
+      "tenant": "cshl",
+      "site": "CSHL"
+    },
+    "verified": "2026-11-18",
+    "notes": "Cold Spring Harbor, NY. Moved from PeopleAdmin (cshl.peopleadmin.com) to Workday wd12. Small board (~31 jobs total); searchText 'research' returns all 31 so search is loose. Research Technician I/II/III roles appear here."
+  },
+  {
+    "id": "jackson-laboratory",
+    "name": "The Jackson Laboratory (JAX)",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://thejacksonlaboratory.wd503.myworkdayjobs.com/External_JAX",
+    "ats": {
+      "type": "workday",
+      "host": "thejacksonlaboratory.wd503.myworkdayjobs.com",
+      "tenant": "thejacksonlaboratory",
+      "site": "External_JAX"
+    },
+    "verified": "2026-11-18",
+    "notes": "Bar Harbor ME, Farmington CT, Sacramento CA, Gainesville FL. Lab entry roles are 'Research Assistant I/II/III'; also many vivarium 'In Vivo Technologist' roles."
+  },
+  {
+    "id": "van-andel",
+    "name": "Van Andel Institute",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://vai.wd1.myworkdayjobs.com/VAICareers",
+    "ats": {
+      "type": "workday",
+      "host": "vai.wd1.myworkdayjobs.com",
+      "tenant": "vai",
+      "site": "VAICareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Grand Rapids, MI. 'Research Technician' / 'Assistant Research Technician' titles."
+  },
+  {
+    "id": "gladstone",
+    "name": "Gladstone Institutes",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://gladstone.wd503.myworkdayjobs.com/careers",
+    "ats": {
+      "type": "workday",
+      "host": "gladstone.wd503.myworkdayjobs.com",
+      "tenant": "gladstone",
+      "site": "careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "San Francisco, CA (UCSF-affiliated; strong neuroscience). Entry lab roles titled 'Research Associate I'."
+  },
+  {
+    "id": "sanford-burnham-prebys",
+    "name": "Sanford Burnham Prebys Medical Discovery Institute",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://sbpdiscovery.org/about/current-openings/",
+    "ats": {
+      "type": "link-only",
+      "reason": "ADP Workforce Now (Recruitment): page embeds <recruitment-current-openings cid='7b452c02-6eab-48c8-bab9-bb0990ccbe46' ccid='19000101_000003'>. Public JSON: GET https://workforcenow.adp.com/mascsr/default/careercenter/public/events/staffing/v1/job-requisitions?cid=7b452c02-6eab-48c8-bab9-bb0990ccbe46&ccId=19000101_000003&lang=en_US&locale=en_US&$top=100 -> {meta:{totalNumber}, jobRequisitions:[{itemID, clientRequisitionID, requisitionTitle (often UPPERCASE), postDate (ISO), requisitionLocations:[{address:{cityName, countrySubdivisionLevel1:{codeValue}}, nameCode:{shortName}}], workLevelCode:{shortName}, payGradeRange}]}. No keyword param; returns all (18 on 2026-11-18); filter locally. Job URL = https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=7b452c02-6eab-48c8-bab9-bb0990ccbe46&ccId=19000101_000003&jobId={itemID}&lang=en_US"
+    },
+    "verified": "2026-11-18",
+    "notes": "La Jolla, CA. Titles include 'RESEARCH ASSISTANT I', 'POSTDOCTORAL ASSOCIATE'."
+  },
+  {
+    "id": "fred-hutch",
+    "name": "Fred Hutchinson Cancer Center",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.fredhutch.org/en/about/careers/job-openings/staff-job-openings.html",
+    "ats": {
+      "type": "icims",
+      "host": "careers-fhcrc.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Seattle, WA. iCIMS search with searchKeyword=research+technician returned Research Technician I/II listings (detail URL https://careers-fhcrc.icims.com/jobs/{id}/{slug}/job). fredhutch.org job pages front the same data via an Elastic /api/search proxy."
+  },
+  {
+    "id": "st-jude",
+    "name": "St. Jude Children's Research Hospital",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://talent.stjude.org/careers/SearchJobs",
+    "ats": {
+      "type": "avature",
+      "host": "talent.stjude.org",
+      "path": "/careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Memphis, TN. Avature on a custom domain. GET https://talent.stjude.org/careers/SearchJobs?keywords=research returned '223 results' with 20 links per page, https://talent.stjude.org/careers/JobDetail/{Slug-JRnnnn}/{id}. Entry roles titled 'Research Technologist', 'Researcher', 'Research Services Technologist'. www.stjude.org itself timed out for curl."
+  },
+  {
+    "id": "stowers",
+    "name": "Stowers Institute for Medical Research",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.stowers.org/careers",
+    "ats": {
+      "type": "link-only",
+      "reason": "Self-hosted listings on stowers.org (job pages like https://www.stowers.org/careers/research-technician-ii-reqid0002589), but the site serves a bot challenge ('Just a moment', HTTP 403) to curl and WebFetch, so no automated endpoint confirmed. Many applications are by email to careers@stowers.org."
+    },
+    "verified": "",
+    "notes": "Kansas City, MO. Frequent 'Research Technician I/II/III' openings in individual labs."
+  },
+  {
+    "id": "mayo-clinic",
+    "name": "Mayo Clinic",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.mayoclinic.org/",
+    "ats": {
+      "type": "html",
+      "url": "https://jobs.mayoclinic.org/search-jobs?k={q}",
+      "linkPattern": "/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Rochester MN, Jacksonville FL, Phoenix/Scottsdale AZ. Radancy TalentBrew front-end. GET https://jobs.mayoclinic.org/search-jobs?k=research+technologist returns HTML with <a href=\"/job/{city}/{slug}/33647/{jobId}\" data-job-id=\"...\"> and data-total-results=\"200\" (equivalent path form /search-jobs/{q}/33647/1). Lab roles titled 'Research Technologist', 'Research Technician', 'Limited Tenure Research Technologist'. Underlying ATS is Oracle (fa-euwp-saasfaprod1.fa.ocs.oraclecloud.com, site CX_1003) and an Eightfold domain mc.org is referenced, but jobs.mayoclinic.org/api/apply/v2/jobs returned nothing."
+  },
+  {
+    "id": "cleveland-clinic",
+    "name": "Cleveland Clinic (incl. Lerner Research Institute)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.clevelandclinic.org/",
+    "ats": {
+      "type": "workday",
+      "host": "ccf.wd1.myworkdayjobs.com",
+      "tenant": "ccf",
+      "site": "ClevelandClinicCareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Cleveland OH and Florida. Very large board dominated by clinical roles; 'research technologist' search returns many Medical Technologist hits, so title filtering is important. Lerner Research Institute lab roles are 'Research Technologist' / 'Research Assistant'."
+  },
+  {
+    "id": "chop",
+    "name": "Children's Hospital of Philadelphia (CHOP Research Institute)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.chop.edu/us/en",
+    "ats": {
+      "type": "workday",
+      "host": "chop.wd108.myworkdayjobs.com",
+      "tenant": "chop",
+      "site": "CHOPExternalCareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Philadelphia, PA. careers.chop.edu is a Phenom front-end; the Workday CXS API is the reliable source. Entry lab roles: 'Research Assistant I/II', 'Research Technician'."
+  },
+  {
+    "id": "dana-farber",
+    "name": "Dana-Farber Cancer Institute",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.dana-farber.org/",
+    "ats": {
+      "type": "workday",
+      "host": "danafarber.wd5.myworkdayjobs.com",
+      "tenant": "danafarber",
+      "site": "dana-farber"
+    },
+    "verified": "2026-11-18",
+    "notes": "Boston, MA. 'research technician' returned 47 hits (Research Technician, Senior Research Technician, lab-specific). A separate non-recruiting site 'dana-farbernonrecruit' holds volunteer roles."
+  },
+  {
+    "id": "mass-general-brigham",
+    "name": "Mass General Brigham (MGH, Brigham and Women's, McLean)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.massgeneralbrigham.org/en/about/careers",
+    "ats": {
+      "type": "workday",
+      "host": "massgeneralbrigham.wd1.myworkdayjobs.com",
+      "tenant": "massgeneralbrigham",
+      "site": "MGBExternal"
+    },
+    "verified": "2026-11-18",
+    "notes": "Boston/Cambridge/Charlestown, MA. Huge source of Harvard-affiliated lab jobs: 'research technician' returned 355 hits (Research Technician I/II, Clinical Research Coordinator)."
+  },
+  {
+    "id": "msk",
+    "name": "Memorial Sloan Kettering Cancer Center",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.mskcc.org/",
+    "ats": {
+      "type": "workday",
+      "host": "msk.wd108.myworkdayjobs.com",
+      "tenant": "msk",
+      "site": "MSKCC_Careers_Primary"
+    },
+    "verified": "2026-11-18",
+    "notes": "New York, NY (incl. Sloan Kettering Institute labs). 'research' returned 107 hits; lab roles are often titled 'Research Technician', 'Research Assistant', 'Senior Research Technician'."
+  },
+  {
+    "id": "boston-childrens",
+    "name": "Boston Children's Hospital",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.bostonchildrens.org/job-search-results/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Symphony Talent CWS (m-cloud, Google Cloud Talent backed) in front of Kenexa BrassRing. Page config: org_id 'companies/8fb8d45a-cbb2-48b9-b438-d16a91fb3bef'. GET https://jobsapi-google.m-cloud.io/api/job/search?companyName=companies/8fb8d45a-cbb2-48b9-b438-d16a91fb3bef&query=research%20technician&pageSize=10&offset=0 -> {totalHits, nextPageToken, searchResults:[{summary, job:{id, ref (BrassRing req e.g. 87220BR), title, primary_city, primary_state, primary_category, open_date (ISO), close_date, url (https://jobs.bostonchildrens.org/job/{id}/{slug}/), salary, employment_type, company_name}}]}. 'companyName' is the required param name ('CompanyName is required' otherwise). 'research' -> 73 hits, mostly 'Research Assistant II'."
+    },
+    "verified": "2026-11-18",
+    "notes": "Boston, MA. HHMI investigators at BCH also post on the HHMI Workday board."
+  },
+  {
+    "id": "cedars-sinai",
+    "name": "Cedars-Sinai",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.cshs.org/",
+    "ats": {
+      "type": "oracle",
+      "host": "hdkk.fa.us6.oraclecloud.com",
+      "siteNumber": "CX_1"
+    },
+    "verified": "2026-11-18",
+    "notes": "Los Angeles, CA. careers.cshs.org is a Radancy TalentBrew front-end (org 252; GET https://careers.cshs.org/search-jobs?k=research+associate -> HTML with /job/{city}/{slug}/252/{id} links, data-total-results=347). Oracle HCM CX_1 'research associate' returned 149 reqs (Research Associate I/II/III in named labs). Candidate site: https://hdkk.fa.us6.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1"
+  },
+  {
+    "id": "md-anderson",
+    "name": "The University of Texas MD Anderson Cancer Center",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.mdanderson.org/search/searchjobs",
+    "ats": {
+      "type": "link-only",
+      "reason": "Custom recruitment-marketing site (jQuery jTable). GET https://jobs.mdanderson.org/Search/SearchResults?keyword=research+assistant&jtStartIndex=0&jtPageSize=50 -> JSON {Result:'OK', TotalRecordCount:414, Records:[{ID (GUID), ReferenceNumber, Title, CityStateDataAbbrev, PostedDate, PostedDateRaw (ISO), DepartmentName, TypeName, TrackingObject:{TitleJson}}]}. Most string fields are wrapped in <span>...</span> and must be stripped. Job URL = https://jobs.mdanderson.org/search/jobdetails/{slug(title)}/{ID}. Other accepted params: categoryid, familyid, adtypeid, citystate, posteddate. Old Taleo (mdanderson.taleo.net/careersection/MDA_ex) now redirects to jobs.mdanderson.org."
+    },
+    "verified": "2026-11-18",
+    "notes": "Houston, TX. Many 'Research Assistant I/II', 'Senior Research Assistant' roles in cancer biology labs."
+  },
+  {
+    "id": "cincinnati-childrens",
+    "name": "Cincinnati Children's Hospital Medical Center",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.cincinnatichildrens.org/us/en",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://jobs.cincinnatichildrens.org/us/en/search-results"
+    },
+    "verified": "2026-11-18",
+    "notes": "Cincinnati, OH. Phenom ddo: 'research assistant' -> totalHits 283 (Research Assistant II/III/IV in named labs; JR-prefixed jobIds suggest Workday backend). companyName is null in ddo jobs, so do not set a companyName filter."
+  },
+  {
+    "id": "wyss-institute",
+    "name": "Wyss Institute for Biologically Inspired Engineering at Harvard",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://wyss.harvard.edu/careers/staff/",
+    "ats": {
+      "type": "smartrecruiters",
+      "companyId": "HarvardUniversity"
+    },
+    "verified": "2026-11-18",
+    "notes": "Boston, MA. Wyss staff jobs are posted on Harvard University's SmartRecruiters company (339 postings total). Restrict to Wyss: customField with fieldLabel 'Brands' valueLabel 'Wyss Institute at Harvard University' (q=wyss returned 3: Scientist II, Senior Scientist II, Research Assistant III). Without filtering this duplicates the Harvard entry from the universities segment. wyss.harvard.edu/careers/staff/ links to jobs.smartrecruiters.com/HarvardUniversity/{id}-{slug}."
+  },
+  {
+    "id": "lieber-institute",
+    "name": "Lieber Institute for Brain Development",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.libd.org/careers/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Paylocity: GET https://recruiting.paylocity.com/recruiting/jobs/All/fdc92993-e582-44e6-bd8b-e2a3614651b2/Lieber-Institute-For-Brain-Development -> HTML containing `window.pageData = {...};` JSON with Jobs:[{JobId, JobTitle, PublishedDate (ISO with offset), LocationName, JobLocation:{City, State, Country}, HiringDepartment, IsInternal, IsRemote, Description (truncated text)}] (3 jobs on 2026-11-18). No keyword search; filter locally. Job URL = https://recruiting.paylocity.com/recruiting/jobs/Details/{JobId}"
+    },
+    "verified": "2026-11-18",
+    "notes": "Baltimore, MD (Johns Hopkins campus). Neuroscience/psychiatric genomics; Research Associate/Technician roles appear periodically."
+  },
+  {
+    "id": "biohub",
+    "name": "Biohub (Chan Zuckerberg Biohub, SF / Chicago / NY)",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://biohub.org/careers/",
+    "ats": {
+      "type": "greenhouse",
+      "board": "biohub"
+    },
+    "verified": "2026-11-18",
+    "notes": "Redwood City/San Francisco CA, Chicago IL, New York NY. www.czbiohub.org/careers redirects to biohub.org/careers. Board returned 15 jobs (lab managers, postdocs, ML). Few technician roles."
+  },
+  {
+    "id": "mbl",
+    "name": "Marine Biological Laboratory",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.mbl.edu/about/careers-internships",
+    "ats": {
+      "type": "ultipro",
+      "host": "recruiting.ultipro.com",
+      "tenant": "MAR1033MBL",
+      "boardId": "4c3007c3-6354-41de-a13f-d95be60d91e9"
+    },
+    "verified": "2026-11-18",
+    "notes": "Woods Hole, MA (University of Chicago affiliate). Host is recruiting.ultipro.com (not recruiting2). 'research' -> 5 incl. Research Assistant II."
+  },
+  {
+    "id": "arc-institute",
+    "name": "Arc Institute",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://arcinstitute.org/jobs",
+    "ats": {
+      "type": "greenhouse",
+      "board": "arcinstitute"
+    },
+    "verified": "2026-11-18",
+    "notes": "Palo Alto, CA. 24 jobs, incl. 'Research Associate II' and 'Senior Research Associate' (some fixed-term)."
+  },
+  {
+    "id": "simons-foundation",
+    "name": "Simons Foundation (incl. Flatiron Institute)",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.simonsfoundation.org/open-positions/",
+    "ats": {
+      "type": "workday",
+      "host": "simonsfoundation.wd1.myworkdayjobs.com",
+      "tenant": "simonsfoundation",
+      "site": "simonsfoundationcareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "New York, NY. Workday holds foundation staff roles (SFARI, Quanta, operations); 'research' -> 8. Flatiron Institute research fellow/scientist positions are posted on Interfolio instead (apply.interfolio.com/{id}, listed on https://www.simonsfoundation.org/open-positions/?home=flatiron) and are mostly computational; not covered by this config."
+  },
+  {
+    "id": "nygc",
+    "name": "New York Genome Center",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.nygenome.org/careers/open-positions-training-opportunities/",
+    "ats": {
+      "type": "html",
+      "url": "https://www.nygenome.org/careers/open-positions-training-opportunities/",
+      "linkPattern": "jobs.silkroad.com/NYGenome/Careers/Jobs/"
+    },
+    "verified": "2026-11-18",
+    "notes": "New York, NY. ATS is SilkRoad (jobs.silkroad.com/NYGenome/Careers itself redirects back to nygenome.org). The open-positions page lists 19 cards: <a class=\"cover_link\" href=\"https://jobs.silkroad.com/NYGenome/Careers/Jobs/{id}\" aria-label=\"{title}\"> (title is in aria-label; anchor text is empty), location in a <span> in the card. Detail pages embed schema.org JobPosting JSON-LD. No keyword search; filter locally."
+  },
+  {
+    "id": "mpfi",
+    "name": "Max Planck Florida Institute for Neuroscience",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.mpfi.org/about-us/careers/career-opportunities/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Knack database app (mpfi.knack.com/careers). Public view: GET https://api.knack.com/v1/pages/scene_1/views/view_6/records?rows_per_page=100 with headers X-Knack-Application-Id: 5c4792fc92bf5332355ba380 and X-Knack-REST-API-Key: knack -> {total_pages, current_page, total_records, records:[{id, field_130 (public position name, e.g. 'Research Technician'), field_17 (HTML span) / field_17_raw:[{id, identifier (lab/department, e.g. 'Rangaraju Lab')}], field_36 (entry #)}]} (11 records on 2026-11-18). No dates or locations; all Jupiter, FL. Job URL = https://mpfi.knack.com/careers#home/position-details/{id}/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Jupiter, FL. Neuroscience-only institute; mostly postdocs plus occasional Research Technician."
+  },
+  {
+    "id": "lji",
+    "name": "La Jolla Institute for Immunology",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.dayforcehcm.com/en-US/lji/CANDIDATEPORTAL",
+    "ats": {
+      "type": "link-only",
+      "reason": "Dayforce (Ceridian) Next.js job board; usr58.dayforcehcm.com/CandidatePortal/en-US/lji/ redirects to jobs.dayforcehcm.com/lji/CANDIDATEPORTAL. Recipe: (1) GET https://jobs.dayforcehcm.com/lji/CANDIDATEPORTAL with a cookie jar (sets __Host-next-auth.csrf-token, __cf_bm); (2) POST https://jobs.dayforcehcm.com/api/geo/lji/jobposting/search with cookies, headers Content-Type: application/json, Origin: https://jobs.dayforcehcm.com, Referer: https://jobs.dayforcehcm.com/en-US/lji/CANDIDATEPORTAL, x-csrf-token: <part before '|' of the URL-decoded csrf cookie>, body {\"clientNamespace\":\"lji\",\"jobBoardCode\":\"CANDIDATEPORTAL\",\"cultureCode\":\"en-US\",\"distanceUnit\":0,\"paginationStart\":0,\"searchText\":\"research\"} -> {jobPostings:[{jobPostingId, jobReqId, jobTitle, jobDescription (HTML), postingStartTimestampUTC, postingLocations:[{formattedAddress}]}], maxCount, offset, count}. Without x-csrf-token the POST returns 403. Job URL = https://jobs.dayforcehcm.com/en-US/lji/CANDIDATEPORTAL/jobs/{jobPostingId}"
+    },
+    "verified": "2026-11-18",
+    "notes": "La Jolla, CA. 'research' -> 7 (Research Technician II, postdocs, immunology intern)."
+  },
+  {
+    "id": "buck-institute",
+    "name": "Buck Institute for Research on Aging",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://buckinstitute.applytojob.com/apply",
+    "ats": {
+      "type": "html",
+      "url": "https://buckinstitute.applytojob.com/apply",
+      "linkPattern": "/applytojob\\.com\\/apply\\/[A-Za-z0-9]{10}\\//"
+    },
+    "verified": "2026-11-18",
+    "notes": "Novato, CA. JazzHR (applytojob.com). The listing page has <a href=\"https://buckinstitute.applytojob.com/apply/{10-char id}/{Slug}\">{title}</a>; no keyword search, filter locally. Note the plain substring '/apply/' would also match nav links, hence the regex."
+  },
+  {
+    "id": "seattle-childrens",
+    "name": "Seattle Children's (Seattle Children's Research Institute)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.seattlechildrens.org/us/en/search-results",
+    "ats": {
+      "type": "phenom",
+      "searchUrl": "https://careers.seattlechildrens.org/us/en/search-results"
+    },
+    "verified": "2026-11-18",
+    "notes": "Seattle, WA. Phenom ddo search for 'research technician' returned totalHits 262 but matching is loose (Animal/Supply Technician ranked first); research lab roles are 'Research Technician', 'Research Scientist', 'Research Associate'. companyName null in ddo."
+  },
+  {
+    "id": "benaroya",
+    "name": "Benaroya Research Institute at Virginia Mason",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.benaroyaresearch.org/careers/current-openings",
+    "ats": {
+      "type": "icims",
+      "host": "careers-benaroyaresearch.icims.com"
+    },
+    "verified": "2026-11-18",
+    "notes": "Seattle, WA. Immunology. iCIMS search 'research' returned Postdoctoral Research Associate and Clinical Research roles."
+  },
+  {
+    "id": "nationwide-childrens",
+    "name": "Nationwide Children's Hospital (Abigail Wexner Research Institute)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://nationwidechildrens.wd5.myworkdayjobs.com/NCHCareers",
+    "ats": {
+      "type": "workday",
+      "host": "nationwidechildrens.wd5.myworkdayjobs.com",
+      "tenant": "nationwidechildrens",
+      "site": "NCHCareers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Columbus, OH. Research lab roles titled 'Research Assistant - RI <Center> <PI>'."
+  },
+  {
+    "id": "chla",
+    "name": "Children's Hospital Los Angeles (Saban Research Institute)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.chla.org/careers",
+    "ats": {
+      "type": "link-only",
+      "reason": "www.chla.org/careers and /research/careers return HTTP 403 to curl and WebFetch (bot protection); jobs.chla.org 301-redirects to www.chla.org/careers and careers.chla.org failed via proxy (503). Older postings used jobs.chla.org/job/{city}/{slug}/277/{id} (Radancy TalentBrew pattern) but this could not be confirmed. Underlying ATS not identified."
+    },
+    "verified": "",
+    "notes": "Los Angeles, CA. Lab roles titled 'Associate Research Specialist', 'Research Assistant', 'Health Science & Behavioral Research Associate'."
+  },
+  {
+    "id": "omrf",
+    "name": "Oklahoma Medical Research Foundation",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://omrf.org/about-omrf/careers/",
+    "ats": {
+      "type": "link-only",
+      "reason": "ClearCompany (same API as Allen Institute): GET https://careers-api.clearcompany.com/v1/ef76cd22-3422-2a47-ba0a-1d4d4dfed3f3 -> {totalCount:25, results:[{id, positionTitle, postedDate, location ('Oklahoma City OK'), departmentName, applyLink ('https://omrf.clearcompany.com/careers/jobs/{id}/apply'), description}]}. All jobs in one response; filter locally. siteId from <script src=careers-content.clearcompany.com/js/v1/career-site.js?siteId=...> on omrf.org careers page."
+    },
+    "verified": "2026-11-18",
+    "notes": "Oklahoma City, OK. Several 'Research Technician I - <PI> Lab' openings."
+  },
+  {
+    "id": "city-of-hope",
+    "name": "City of Hope (Beckman Research Institute)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.cityofhopejobs.org/jobs/",
+    "ats": {
+      "type": "html",
+      "url": "https://www.cityofhopejobs.org/jobs/?search_term={q}",
+      "linkPattern": "/job/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Duarte/Monrovia, CA. Custom job site; keyword param is search_term (q/keyword are ignored). Links look like /job/{id}/{slug}/ (e.g. /job/11918/research-associate-i-cancer-genomics-and-therapeutics-research-us-ca-duarte/); ~22 per page and some unrelated featured jobs are mixed in. Category page /area/research/ lists research jobs. Underlying ATS is Taleo (aa067.taleo.net/careersection/ex/jobsearch.ftl loads) but portal id not confirmed. Many 'Research Associate I/II' roles. cityofhope.org/careers returns 403 to curl."
+  },
+  {
+    "id": "wistar",
+    "name": "The Wistar Institute",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.dayforcehcm.com/en-US/wistar/CANDIDATEPORTAL",
+    "ats": {
+      "type": "link-only",
+      "reason": "Dayforce, same recipe as La Jolla Institute with clientNamespace 'wistar': GET https://jobs.dayforcehcm.com/wistar/CANDIDATEPORTAL (cookie jar) then POST https://jobs.dayforcehcm.com/api/geo/wistar/jobposting/search with x-csrf-token (from __Host-next-auth.csrf-token cookie, part before '|'), Origin/Referer headers and body {\"clientNamespace\":\"wistar\",\"jobBoardCode\":\"CANDIDATEPORTAL\",\"cultureCode\":\"en-US\",\"distanceUnit\":0,\"paginationStart\":0} (searchText optional) -> {jobPostings:[{jobPostingId, jobTitle, postingStartTimestampUTC, postingLocations}], maxCount:19}. Linked from https://www.wistar.org/about-wistar/employment/ as www.dayforcehcm.com/CandidatePortal/en-US/Wistar."
+    },
+    "verified": "2026-11-18",
+    "notes": "Philadelphia, PA. Research Assistant / Technician II roles in named labs; also Biomedical Research Technician apprenticeship."
+  },
+  {
+    "id": "fox-chase",
+    "name": "Fox Chase Cancer Center (Temple Health)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.silkroad.com/templehealth/Careers",
+    "ats": {
+      "type": "html",
+      "url": "https://jobs.silkroad.com/templehealth/Careers?SearchString={q}",
+      "linkPattern": "/templehealth/Careers/jobs/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Philadelphia, PA. foxchase.org/careers redirects to templehealth.org/careers -> SilkRoad OpenHire board shared with all Temple Health hospitals (mostly clinical). Keyword param is SearchString (matching is OR-like); 25 per page, paging via &page=N. Fox Chase jobs carry 'FCCC' or 'Fox Chase' in the title. Detail URL https://jobs.silkroad.com/templehealth/Careers/jobs/{id}."
+  },
+  {
+    "id": "moffitt",
+    "name": "Moffitt Cancer Center",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.moffitt.org/careers/",
+    "ats": {
+      "type": "link-only",
+      "reason": "moffitt.org returns HTTP 403 to curl (bot protection); Moffitt uses Workday internally but the external tenant/site could not be confirmed. Partial alternative seen: https://moffitt.betterteam.com/ (Betterteam syndication page) lists ~23 jobs as relative links like /veterinary-technician-ii, but it is not the full board."
+    },
+    "verified": "",
+    "notes": "Tampa, FL. Lab roles titled 'Research Associate I/II (Research Technician)', 'Research Specialist'."
+  },
+  {
+    "id": "nih",
+    "name": "National Institutes of Health (NIH)",
+    "category": "Government Lab",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.usajobs.gov/search/results/?a=HE38",
+    "ats": {
+      "type": "link-only",
+      "reason": "USAJOBS. (a) Official Search API needs a free key: GET https://data.usajobs.gov/api/search?Keyword=biologist&Organization=HE38&ResultsPerPage=100 with headers Host: data.usajobs.gov, User-Agent: <registered email>, Authorization-Key: <key> (register at developer.usajobs.gov); without the key it returns 401 (confirmed). Response: SearchResult.{SearchResultCountAll, SearchResultItems:[{MatchedObjectDescriptor:{PositionTitle, PositionURI, PositionLocationDisplay, PublicationStartDate, ApplicationCloseDate, OrganizationName, DepartmentName}}]}. (b) KEYLESS alternative confirmed working: GET https://data.usajobs.gov/api/historicjoa?HiringAgencyCodes=HE38&StartPositionCloseDate=11-18-2026 (dates MM-DD-YYYY; returns announcements still open on/after that close date) -> {data:[{usajobsControlNumber, positionTitle, hiringAgencyName, hiringSubelementName (NIH Institute/Center), positionOpenDate, positionCloseDate, minimumGrade, maximumGrade, positionlocations:[{positionLocationCity, positionLocationState}], jobcategories:[{series}]}], paging} (41 NIH rows). Also supports PositionSeries=0401 (Biology) / 0404 (Biological Science Technician) / 0403 (Microbiology). Job URL = https://www.usajobs.gov/job/{usajobsControlNumber}. No keyword param; filter titles locally."
+    },
+    "verified": "2026-11-18",
+    "notes": "Bethesda/Rockville MD, RTP NC (NIEHS), Baltimore (NIA/NIDA), Frederick (NCI). Many intramural lab jobs (Biologist, Biological Science Technician) are on USAJOBS; postbac/pre-doc IRTA fellowships are NOT on USAJOBS (see nih-irta entry). hr.nih.gov and training.nih.gov return 403 to curl."
+  },
+  {
+    "id": "nih-irta",
+    "name": "NIH Intramural Training (Postbac IRTA / Graduate Partnerships)",
+    "category": "Government Lab",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.training.nih.gov/research-training/pb/",
+    "ats": {
+      "type": "link-only",
+      "reason": "NIH OITE application portal (Postbaccalaureate IRTA/CRTA, Graduate Partnerships Program). Applications are a single pooled application per cycle; PIs search applicants rather than posting jobs. training.nih.gov returns HTTP 403 to curl/WebFetch from this environment. No public jobs API identified."
+    },
+    "verified": "",
+    "notes": "Key entry point for post-bac and pre-doc researchers: 1-2 year paid postbac fellowships in NIH intramural labs (neuroscience at NINDS/NIMH, etc.)."
+  },
+  {
+    "id": "cdc",
+    "name": "Centers for Disease Control and Prevention (CDC)",
+    "category": "Government Lab",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.usajobs.gov/search/results/?a=HE39",
+    "ats": {
+      "type": "link-only",
+      "reason": "USAJOBS, same as NIH entry with agency code HE39: keyless GET https://data.usajobs.gov/api/historicjoa?HiringAgencyCodes=HE39&StartPositionCloseDate=11-18-2026 returned 16 open announcements (Health Scientist, Environmental Health Scientist...). Official search API: https://data.usajobs.gov/api/search?Organization=HE39 (needs Authorization-Key). Job URL = https://www.usajobs.gov/job/{usajobsControlNumber}."
+    },
+    "verified": "2026-11-18",
+    "notes": "Atlanta, GA. Lab roles (Microbiologist, Biologist, ORISE fellowships) - ORISE fellowships are on zintellect.com, not USAJOBS."
+  },
+  {
+    "id": "pnnl",
+    "name": "Pacific Northwest National Laboratory",
+    "category": "Government Lab",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://careers.pnnl.gov/",
+    "ats": {
+      "type": "jibe",
+      "host": "careers.pnnl.gov"
+    },
+    "verified": "2026-11-18",
+    "notes": "Richland, WA (DOE). Jibe front-end over iCIMS (careers-pnnl.icims.com; separate iCIMS portals postdoc-pnnl.icims.com and universityrecruiting-pnnl.icims.com). 'biology' -> 8 incl. 'Post Bachelors Research Associate' (post-bac program)."
+  },
+  {
+    "id": "ornl",
+    "name": "Oak Ridge National Laboratory",
+    "category": "Government Lab",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.ornl.gov/",
+    "ats": {
+      "type": "successfactors",
+      "baseUrl": "https://jobs.ornl.gov"
+    },
+    "verified": "2026-11-18",
+    "notes": "Oak Ridge, TN (DOE). SuccessFactors RMK: /search/?q=biology&startrow=0 returned 14 data-rows (Postdoctoral Research Associate - Fungal Systems and Genetics, Automation Bioengineer). Biosciences Division is the relevant group."
+  },
+  {
+    "id": "lbnl",
+    "name": "Lawrence Berkeley National Laboratory",
+    "category": "Government Lab",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.lbl.gov/",
+    "ats": {
+      "type": "html",
+      "url": "https://jobs.lbl.gov/jobs/search?keywords={q}",
+      "linkPattern": "/jobs\\.lbl\\.gov\\/jobs\\/[a-z0-9-]+-\\d+/"
+    },
+    "verified": "2026-11-18",
+    "notes": "Berkeley, CA (DOE; Biosciences Area, JGI). Custom career site over Taleo (lbl.taleo.net). GET /jobs/search?keywords=research+associate redirects to /jobs/search/{searchId} and lists 9 per page as <a href=\"https://jobs.lbl.gov/jobs/{slug}-{id}\">{title}</a>. Keyword param must be 'keywords' ('q' and 'query' are ignored). Titles: 'Research Associate', 'Research Assistant'."
+  },
+  {
+    "id": "northwell-feinstein",
+    "name": "Northwell Health / Feinstein Institutes for Medical Research",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://jobs.northwell.edu/",
+    "ats": {
+      "type": "oracle",
+      "host": "eppr.fa.us2.oraclecloud.com",
+      "siteNumber": "CX_2"
+    },
+    "verified": "2026-11-18",
+    "notes": "Manhasset/New Hyde Park, Long Island NY. jobs.northwell.edu is a Symphony Talent (jobsapi-google.m-cloud.io) front-end; Oracle CX_2 'research assistant' returned 43 reqs. Feinstein lab roles are 'Research Assistant', 'Research Coordinator', 'Research Technician'; board is dominated by clinical roles."
+  },
+  {
+    "id": "childrens-national",
+    "name": "Children's National Hospital (Children's National Research Institute)",
+    "category": "Medical School / Hospital",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://childrensnational.wd108.myworkdayjobs.com/CN_Careers",
+    "ats": {
+      "type": "workday",
+      "host": "childrensnational.wd108.myworkdayjobs.com",
+      "tenant": "childrensnational",
+      "site": "CN_Careers"
+    },
+    "verified": "2026-11-18",
+    "notes": "Washington, DC (Research & Innovation Campus). 'research' -> 288 incl. 'Research Technician I'. childrensnational.org careers page is also Phenom-based."
+  },
+  {
+    "id": "monell",
+    "name": "Monell Chemical Senses Center",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://monell.org/careers/",
+    "ats": {
+      "type": "link-only",
+      "reason": "ADP Workforce Now (same API as Sanford Burnham Prebys): GET https://workforcenow.adp.com/mascsr/default/careercenter/public/events/staffing/v1/job-requisitions?cid=d24b5e1f-d19a-4772-990f-d7a981aadfe4&ccId=19000101_000001&lang=en_US&locale=en_US&$top=100 -> {meta:{totalNumber:2}, jobRequisitions:[{itemID, requisitionTitle, postDate, requisitionLocations}]} ('Research Technician', 'Research Vivarium Technician'). Note ccId here is 19000101_000001. Faculty/postdoc posts use Interfolio (apply.interfolio.com/{id}). Job URL = https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=d24b5e1f-d19a-4772-990f-d7a981aadfe4&ccId=19000101_000001&jobId={itemID}&lang=en_US"
+    },
+    "verified": "2026-11-18",
+    "notes": "Philadelphia, PA. Taste/smell neuroscience; small institute."
+  },
+  {
+    "id": "jcvi",
+    "name": "J. Craig Venter Institute",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.jcvi.org/careers",
+    "ats": {
+      "type": "link-only",
+      "reason": "ADP Workforce Now: GET https://workforcenow.adp.com/mascsr/default/careercenter/public/events/staffing/v1/job-requisitions?cid=166ed05b-9235-4bfe-b7dd-f1e4871fea3b&ccId=19000101_000001&lang=en_US&locale=en_US&$top=100 -> {meta:{totalNumber:1}, jobRequisitions:[{itemID, requisitionTitle, postDate, requisitionLocations}]}. Job URL = https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=166ed05b-9235-4bfe-b7dd-f1e4871fea3b&ccId=19000101_000001&jobId={itemID}&lang=en_US"
+    },
+    "verified": "2026-11-18",
+    "notes": "La Jolla, CA and Rockville, MD. Genomics/synthetic biology; only 1 opening on 2026-11-18."
+  },
+  {
+    "id": "tgen",
+    "name": "Translational Genomics Research Institute (TGen, City of Hope)",
+    "category": "Research Institute",
+    "region": "United States",
+    "hq": "US",
+    "careersUrl": "https://www.tgen.org/careers/",
+    "ats": {
+      "type": "link-only",
+      "reason": "Paylocity (same format as Lieber Institute): GET https://recruiting.paylocity.com/recruiting/jobs/All/bf3a9e6a-f79a-4062-b013-9585c34b876c/The-Translational-Genomics-Research-Institute -> HTML with `window.pageData = {...};` Jobs:[{JobId, JobTitle, PublishedDate, JobLocation:{City, State}}] (2 jobs on 2026-11-18, e.g. 'Research Associate I - Collaborative Sequencing Center'). Job URL = https://recruiting.paylocity.com/recruiting/jobs/Details/{JobId}"
+    },
+    "verified": "2026-11-18",
+    "notes": "Phoenix, AZ."
+  }
+]

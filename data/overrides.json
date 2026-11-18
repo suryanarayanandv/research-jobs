@@ -1,0 +1,83 @@
+{
+  "$comment": "Hand fixes applied on top of data/research/*.json by npm run build:companies. Keyed by employer id; fields replace the researched ones.",
+  "allen-institute": {
+    "ats": {
+      "type": "clearcompany",
+      "siteId": "f724f829-c8a2-8b32-a83b-2a479b88b77f"
+    },
+    "verified": "2026-11-18"
+  },
+  "omrf": {
+    "ats": {
+      "type": "clearcompany",
+      "siteId": "ef76cd22-3422-2a47-ba0a-1d4d4dfed3f3"
+    },
+    "verified": "2026-11-18"
+  },
+  "sanford-burnham-prebys": {
+    "ats": {
+      "type": "adp",
+      "cid": "7b452c02-6eab-48c8-bab9-bb0990ccbe46",
+      "ccId": "19000101_000003"
+    },
+    "verified": "2026-11-18"
+  },
+  "monell": {
+    "ats": {
+      "type": "adp",
+      "cid": "d24b5e1f-d19a-4772-990f-d7a981aadfe4",
+      "ccId": "19000101_000001"
+    },
+    "verified": "2026-11-18"
+  },
+  "jcvi": {
+    "ats": {
+      "type": "adp",
+      "cid": "166ed05b-9235-4bfe-b7dd-f1e4871fea3b",
+      "ccId": "19000101_000001"
+    },
+    "verified": "2026-11-18"
+  },
+  "lieber-institute": {
+    "ats": {
+      "type": "paylocity",
+      "url": "https://recruiting.paylocity.com/recruiting/jobs/All/fdc92993-e582-44e6-bd8b-e2a3614651b2/Lieber-Institute-For-Brain-Development"
+    },
+    "verified": "2026-11-18"
+  },
+  "tgen": {
+    "ats": {
+      "type": "paylocity",
+      "url": "https://recruiting.paylocity.com/recruiting/jobs/All/bf3a9e6a-f79a-4062-b013-9585c34b876c/The-Translational-Genomics-Research-Institute"
+    },
+    "verified": "2026-11-18"
+  },
+  "boston-childrens": {
+    "ats": {
+      "type": "mcloud",
+      "companyName": "companies/8fb8d45a-cbb2-48b9-b438-d16a91fb3bef"
+    },
+    "verified": "2026-11-18"
+  },
+  "nih": {
+    "ats": {
+      "type": "usajobs",
+      "agency": "HE38"
+    },
+    "verified": "2026-11-18"
+  },
+  "cdc": {
+    "ats": {
+      "type": "usajobs",
+      "agency": "HE39"
+    },
+    "verified": "2026-11-18"
+  },
+  "md-anderson": {
+    "ats": {
+      "type": "jtable",
+      "host": "jobs.mdanderson.org"
+    },
+    "verified": "2026-11-18"
+  }
+}
